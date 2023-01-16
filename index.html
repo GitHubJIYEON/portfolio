@@ -27,12 +27,12 @@
     </div>
     <div class="navbar_menu">
         <ul class="navbar_menu">
-            <li class="navbar_menu_item active">Home</li>
-            <li class="navbar_menu_item">About</li>
-            <li class="navbar_menu_item">Skills</li>
-            <li class="navbar_menu_item">My work</li>
-            <li class="navbar_menu_item">Testimonial</li>
-            <li class="navbar_menu_item">contact</li>
+            <li class="navbar_menu_item active" data-link="#home">Home</li>
+            <li class="navbar_menu_item" data-link="#about">About</li>
+            <li class="navbar_menu_item" data-link="#skills">Skills</li>
+            <li class="navbar_menu_item" data-link="#work">My work</li>
+            <li class="navbar_menu_item" data-link="#testimonial">Testimonial</li>
+            <li class="navbar_menu_item" data-link="#contact">contact</li>
         </ul>
     </div>
 
@@ -45,6 +45,7 @@
 <!-- //Navbar -->
 <!-- Home -->
 <section id="home">
+  <div class="home_container">
     <img
         src="imgs/profile-pic_pink_pupple_R.png"
         alt="jiyeon's profile photo"
@@ -53,6 +54,7 @@
     <h1 class="home_title">Hello, <br /> I am front-end developer</h1>
     <h2 class="home_description">Don't be the same Be better</h2>
     <button class="home_contact">contact Me</button>
+  </div>
 </section>
 <!-- //Home -->
 <!-- About -->
@@ -279,5 +281,9 @@
     </p>
 </section>
 <!-- //contact --> 
+<!-- Arrow up -->
+<button class="arrow-up">
+  <i class="fas fa-arrow-up"></i>
+</button>
 </body>
 </html>
