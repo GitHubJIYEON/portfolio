@@ -23,9 +23,18 @@ navbarMenu.addEventListener('click', (event) => {
         return;
     }
     // console.log(event.target.dataset.link);
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({ behavior: 'smooth'});
+    navbarMenu.classList.remove('open')
+    scrollIntoView(link)
+    // const scrollTo = document.querySelector(link);
+    // scrollTo.scrollIntoView({ behavior: 'smooth'});
 });
+
+// navbar toggle button for small screen 
+const navbarToggleBtn = document.querySelector('.navbar_toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
+});
+
 
 //Handle click on "contact me" button on home
 const homeContactBtn = document.querySelector('.home_contact');
@@ -57,7 +66,49 @@ arrowUp.addEventListener('click', (event) => {
     
 })
 
+// Projects
+const workBtnContainer = document.querySelector('.work_categories');
+const projectContainer = document.querySelector('.work_projects');
+const projects = document.querySelectorAll('.project');
+
+workBtnContainer.addEventListener('click', (e) => {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if(filter == null){
+        return;
+    }
+
+
+    //선택된 아이템 select 없애고 새로 클릭된 아이템에 active 붙이기
+    const active = document.querySelector('.category_btn.selected');
+    active.classList.remove('selected');
+    const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+    target.classList.add('selected')
+
+    // console.log(filter);
+    projectContainer.classList.add('anim-out')
+    setTimeout(() => {
+        projects.forEach((project) => {
+            console.log(project.dataset.type);
+            if (filter === '*' || filter === project.dataset.type) {
+                project.classList.remove('invisible');
+            } else {
+                project.classList.add('invisible');
+            }
+            });    
+        projectContainer.classList.remove('anim-out')
+    }, 300);
+})
+
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({ behavior: 'smooth'});
 }
+
+// 이미지 3개
+  /* Demo purposes only */
+  $(".hover").mouseleave(
+    function () {
+      $(this).removeClass("hover");
+    }
+  );
+  
