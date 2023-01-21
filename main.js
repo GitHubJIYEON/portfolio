@@ -132,6 +132,16 @@ document.getElementById('billComent').innerHTML = billComent;
 document.getElementById('bangComent').innerHTML = bangComent;
 document.getElementById('choiComent').innerHTML = choiComent;
 
+//Testimonials - View more btn
+//도와줘
+// const viewMorebtn = document.querySelector('.testimonial_display_btn');
+// const testimonialText= document.getElementsByClassName('testimonial_speech-bubble')
+// viewMorebtn.addEventListener('click', (event) => {
+//     viewMorebtn.classList.remove('testimonial_display_btn');
+//     testimonialText.style.removeProperty('overflow');
+// });
+
+
 // 이미지 3개
   /* Demo purposes only */
 //   $(".hover").mouseleave(
