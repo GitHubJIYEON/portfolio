@@ -27,7 +27,7 @@
     <div class="navbar_logo">
         <!-- <i class="fab fa-diaspora"></i> -->
         <a href="#">
-          <img src="imgs/logo/logo_name.png" alt="logo_name">
+          <img src="imgs/logo/logo_name_nobg.png" alt="logo_name">
         </a>
     </div>
     <div class="navbar_menu">
@@ -98,7 +98,7 @@
     </div>
         <div class="about_container">
       <figure class="about_img">
-        <img src="./imgs/about/about_pic3.png" alt="sq-sample27" />
+        <img src="./imgs/about/about_pic0.png" alt="sq-sample27" />
         <figcaption>
           <p>I say, if your knees aren't green by the end of the day, you ought to seriously re-examine your life.</p>
           <div class="heading">
@@ -276,46 +276,67 @@
   <div class="section_container">
     <h1>Work</h1>
     <h3>Project</h3>
-    <div class="work_categories">
-      <button class="category_btn selected" data-filter="*">
-        All<span class="category_count">8</span>
-      </button>
-      <button class="category_btn" data-filter="javascript">
-        JavaScript<span class="category_count">8</span>
-      </button>
-      <button class="category_btn" data-filter="react">
-        React<span class="category_count">8</span>
-      </button>
-      <button class="category_btn" data-filter="animation">
-        animation<span class="category_count">8</span>
-      </button>
-    </div>
-    <div class="work_projects">
-      <a href="#" class="project" target="_blank" data-type="javascript">
-        <img src="./imgs/projects/youtube.png" alt="" class="project_img">
-        <div class="project_description">
-          <h3>youtube Site</h3>
-          <span>Clone coding with HTML and CSS</span>
-        </div>
-      </a>
-      <a href="#" class="project" target="_blank" data-type="react">
-        <img src="./imgs/projects/youtube.png" alt="" class="project_img">
-        <div class="project_description">
-          <h3>무슨 Site</h3>
+
+      <div class="work_categories">
+        <button class="category_btn selected" data-filter="*">
+          All<span class="category_count">8</span>
+        </button>
+        <button class="category_btn" data-filter="javascript">
+          JavaScript<span class="category_count">8</span>
+        </button>
+        <button class="category_btn" data-filter="react">
+          React<span class="category_count">8</span>
+        </button>
+        <button class="category_btn" data-filter="animation">
+          animation<span class="category_count">8</span>
+        </button>
+      </div>
+      <div class="work_projects">
+        <a href="#" class="project" target="_blank" data-type="javascript">
+          <img src="./imgs/projects/youtube.png" alt="" class="project_img">
+          <div class="project_description">
+            <h3>youtube Site</h3>
             <span>Clone coding with HTML and CSS</span>
+          </div>
+        </a>
+        <a href="#" class="project" target="_blank" data-type="react">
+          <img src="./imgs/projects/youtube.png" alt="" class="project_img">
+          <div class="project_description">
+            <h3>무슨 Site</h3>
+              <span>Clone coding with HTML and CSS</span>
+          </div>
+        </a>
+        <a href="#" class="project" target="_blank" data-type="animation">
+          <img src="./imgs/projects/navbar.png" alt="" class="project_img">
+          <div class="project_description">
+            <h3>무슨 Site</h3>
+            <span>Clone coding with HTML and CSS</span>
+          </div>
+        </a>
+      </div>
+    
+          <!-- work다시 -->
+    <div class="work_container">
+
+      <!-- project-item -->
+      <div class="work_box">
+        <div class="web_box">
+          <div class="web_img"></div>
         </div>
-      </a>
-      <a href="#" class="project" target="_blank" data-type="animation">
-        <img src="./imgs/projects/navbar.png" alt="" class="project_img">
-        <div class="project_description">
-          <h3>무슨 Site</h3>
-          <span>Clone coding with HTML and CSS</span>
+        <div class="web_title">JavaScript</div>
+        <div class="web_text">this is with JavaScript this is with JavaScriptthis is with JavaScript</div>
+      </div>
+
+      <div class="work_box">
+        <div class="web_box">
+          <div class="web_img"></div>
         </div>
-      </a>
+        <div class="web_title">JavaScript</div>
+        <div class="web_text">this is with JavaScript this is with JavaScriptthis is with JavaScript</div>
+      </div>
+
     </div>
   </div>
-
-  
 </section>
 <!-- //Work -->
 <!-- testimonials -->
@@ -324,23 +345,24 @@
         <h1>Testimonials</h1>
         <h3>See what they say about me</h3>
         <div class="testimonials">
+
           <div class="testimonial">
             <img 
             src="./imgs/testimonial/avatar1.png" 
             alt="People"
             class="testimonial_avatar"
             />
-
-            <div class="testimonial_speech-bubble">
+            <div class="testimonial-comment-box view-more-before">
               <p id="billComent"></p>
-              <button class="testimonial_display_btn">View more</button>
+              <button class="testimonial_display_btn">view more <i class="fa-solid fa-arrow-down"></i></button>
               <p class="name"><a href="#">멘토 Bill</a></p>
             </div>
           </div>
+
           <div class="testimonial">
-            <div class="testimonial_speech-bubble">
+            <div class="testimonial-comment-box view-more-before">
               <p id="bangComent"></p>
-              <button class="testimonial_display_btn">View more</button>
+              <button class="testimonial_display_btn">View more <i class="fa-solid fa-arrow-down"></i></button>
               <p class="name"><a href="#">방 * 린</a></p>
             </div>
             <img 
@@ -349,15 +371,16 @@
             class="testimonial_avatar"
             />
           </div>
+
           <div class="testimonial">
             <img 
             src="./imgs/testimonial/avatar3.png" 
             alt="People"
             class="testimonial_avatar"
             />
-            <div class="testimonial_speech-bubble">
+            <div class="testimonial-comment-box view-more-before">
               <p id="choiComent"></p>
-              <button class="testimonial_display_btn">View more</button>
+              <button class="testimonial_display_btn">View more <i class="fa-solid fa-arrow-down"></i></button>
               <p class="name"><a href="#">최 * 정</a></p>
             </div>
           </div>

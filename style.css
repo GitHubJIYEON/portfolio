@@ -259,7 +259,7 @@ figure.about_img {
   overflow: hidden;
   margin: 20px;
   min-width: 220px;
-  max-width: 410px;
+  max-width: 420px;
   max-height: 560px;
   width: 100%;
   background: #000000;
@@ -385,11 +385,11 @@ figure.about_img.hover p {
 .major_icon{
   width: 170px;
   height: 170px;
-  line-height: 170px;
+  line-height: 190px;
   font-size: 70px;
-  color: var(--color-blue);
+  color: var(--color-black);
   margin: auto;
-  border: 1px solid var(--color-blue);
+  border: 1px dotted var(--color-black);
   border-radius: var(--size-border-radius);
   border-radius: 50%;
   margin-bottom: 16px;
@@ -399,7 +399,7 @@ figure.about_img.hover p {
   transition: all var(--animation-duration) ease;
 }
 .major_icon:hover i {
-  color: var(--color-orange);
+  color: var(--color-light-brown);
   transform: rotate(-360deg) scale(1.1);
 }
 
@@ -412,7 +412,7 @@ figure.about_img.hover p {
 } */
 
 #skills {
-  background-color: var(--color-yellow);
+  background-color: var(--color-dark-white);
 }
 
 .skillset {
@@ -566,6 +566,101 @@ figure.about_img.hover p {
   background-color: var(--color-dark-white);
 }
 
+/* work-project-다시하기 */
+/* .work_box{
+  left: 0px;
+  top: 291px;
+  width: 558px;
+  height: 581px;
+  background-color : rgba(220,213,201,1);
+  left: 0px;
+  top: 291px;
+  width: 558px;
+  height: 581px;
+}
+.simple {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  border-style: solid;
+}
+.work_web {
+  width: 545px; 
+  height: 570px; 
+  position: absolute; 
+  top: 0px; 
+  left: 0px; 
+  background-image: url("//static.showit.co/800/XWqXJiKgRTuCjy32IsYo9Q/135807/smallerscreencapture-nashville-showit-site-2022-12-24-10_29_49.jpg");
+}
+.web_title {
+  text-transform: uppercase;
+  font-size: 24px;
+  text-align: center;
+  overflow: hidden;
+
+      color: rgba(17,17,17,1);
+    line-height: 1.2;
+    letter-spacing: 0em;
+  font-family: 'Editors note regular';
+  font-weight: 400;
+    font-style: normal;
+}
+.web_text {
+  text-align: center;
+
+    color: rgba(17,17,17,1);
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 0.3em;
+    font-size: 9px;
+    text-align: left;
+    font-family: 'Mattone';
+    font-weight: 400;
+    font-style: normal;
+} */
+
+.work_container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  margin: auto;
+  
+}
+.web_box {
+  width: 440px;
+  height: 460px;
+  background-color: #92795E;
+  position: relative;
+    text-align: center;
+  margin: auto;
+}
+.web_img{
+  width: 300px;
+  height: 390px;
+  background-color: var(--color-light-white);
+  position: absolute;
+  bottom: 0;
+  left: 70px;
+}
+.web_title {
+  font-size: 24px;
+  text-align: center;
+  color: rgba(17,17,17,1);
+  line-height: 1.2;
+  letter-spacing: 0em;
+  font-family: 'Editors note regular';
+  font-weight: 400;
+  
+}
+.web_text {
+
+}
+
+
+
+
 /* Testimonials */
 #testimonials {
   background-color: var(--color-light-white);
@@ -587,16 +682,19 @@ figure.about_img.hover p {
 .testimonial_avatar:nth-child(even) {
   margin-left: 40px;
 }
-.testimonial_speech-bubble {
+.testimonial-comment-box {
   width: 100%;
   padding: 18px;
   background-color: var(--color-light-white);
   border-radius: var(--size-border-radius);
 }
-.testimonial_speech-bubble p {
+
+.testimonial-comment-box p {
   color: var(--color-light-grey);
   margin: 0;
-  
+}
+
+.testimonial-comment-box.view-more-before p {
   overflow: hidden;
   display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -604,6 +702,7 @@ figure.about_img.hover p {
   text-overflow: ellipsis;
   word-wrap: break-word;
 }
+
 
 .testimonial_display_btn {
   display: block;
@@ -615,7 +714,7 @@ figure.about_img.hover p {
   transform: scale(1.2);
 }
 
-.testimonial_speech-bubble a {
+.testimonial-comment-box a {
   color: #B68E74;
 }
 .name {
@@ -866,7 +965,7 @@ figure.about_img.hover p {
     margin: 0;
     margin-bottom: 8px;
   }
-  .testimonial_speech-bubble {
+  .testimonial-comment-box {
     order: 1;
   }
   

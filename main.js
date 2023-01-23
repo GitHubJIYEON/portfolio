@@ -128,18 +128,44 @@ let choiComent = `지연님 이틀간 너무 수고 많으셨어요!!! 진짜 �
 주말동안 열심히 공부해봐야겠어요!! 개선하실 부분 없으셨는데 선택 안하면 다음으로 넘어가지 않아서 저희 아직은 코스 진행하면서 배울게 많으니까 저걸로 굳이굳이 골랐습니다ㅜㅜ 
 지연님 아이디어가 너무 좋으셨어서 나중에 프로젝트도 정말 궁금해요!! 담에 또 다시 페어로 만나거나 프로젝트 팀원 혹은 회사 동기??ㅎㅎㅎㅎ로 만나뵐 수 있었으면 좋겠어요!!! 
 남은 저녁 시간도 잘 보내시고 저희 내일 커피톡에서 또 뵐게요!! 정말 수고 많으셨어요!!! 남은 기간도 파이팅입니다!!!`;
+
 document.getElementById('billComent').innerHTML = billComent;
 document.getElementById('bangComent').innerHTML = bangComent;
 document.getElementById('choiComent').innerHTML = choiComent;
 
 //Testimonials - View more btn
-//도와줘
-// const viewMorebtn = document.querySelector('.testimonial_display_btn');
-// const testimonialText= document.getElementsByClassName('testimonial_speech-bubble')
-// viewMorebtn.addEventListener('click', (event) => {
-//     viewMorebtn.classList.remove('testimonial_display_btn');
-//     testimonialText.style.removeProperty('overflow');
-// });
+const viewMorebtn = document.querySelectorAll('.testimonial_display_btn');
+
+console.log('viewMorebtn: ', viewMorebtn);
+
+const testimonialCommentBox = document.querySelectorAll(
+  '.testimonial-comment-box'
+);
+
+viewMorebtn.forEach(button => {
+    button.addEventListener('click', (event) => {
+      console.log('view more button click !!!');
+
+      console.log(event.target);
+      console.log(event.target.children);
+      console.log(event.target.children[0].classList);
+      console.log(event.target.children[0].classList.contains('fa-arrow-down'));
+
+      console.log(event.target);
+      console.log(event.target.parentElement);
+      console.log(event.target.parentElement.classList);
+
+      if (event.target.children[0].classList.contains('fa-arrow-down')){
+        // 더보기 닫혔을 때 열기
+        event.target.children[0].classList.replace('fa-arrow-down', 'fa-arrow-up');
+        event.target.parentElement.classList.remove('view-more-before');
+      }else{
+        // 더보기 열렸을 때 닫기
+        event.target.children[0].classList.replace('fa-arrow-up', 'fa-arrow-down');
+        event.target.parentElement.classList.add('view-more-before');
+      }
+    });
+})
 
 
 // 이미지 3개
