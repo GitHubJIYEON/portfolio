@@ -176,6 +176,3 @@ viewMorebtn.forEach(button => {
 //     }
 //   );
   
-
-
-// about me test
