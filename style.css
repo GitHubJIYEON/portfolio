@@ -7,7 +7,6 @@ font-family: 'Playfair Display', serif;
 
 /* Global */
 
-
 :root {
   /* Color */
   --color-pink: #fe918d;
@@ -182,14 +181,14 @@ p {
   color: var(--color-white);
   display: none;
 }
-.mroe_open {
+.more_open {
   border-left: 1px solid black;
   border-right: 1px solid black;
   background-color: var(--color-dark-white);
   padding: 27px;
 }
 
-.more_open_box{
+.sidebar{
     width: 320px;
     height: 100%;
     position: fixed;
@@ -199,6 +198,11 @@ p {
     box-shadow: -10px 9px 34px rgb(17 17 17 / 30%);
     text-align: center;
 }
+
+.sidebar_action {
+  display: none;
+}
+
 .more_close {
   right: 0;
   padding: 20px;
@@ -226,9 +230,9 @@ p {
   position: relative;
   top:  70px;
 }
-.more_lists i {
+.icon_lists a {
   font-size: 25px;
-  padding: 16px;
+  margin: 16px;
 }
 .icon_lists {
   display: inline-flex;

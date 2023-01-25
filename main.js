@@ -67,6 +67,19 @@ arrowUp.addEventListener('click', (event) => {
     
 })
 
+//side bar open & close
+const sidebarOpen = document.querySelector('.sidebar_open');
+const sidebarClose = document.querySelector('.sidebar_close');
+const sidebarAction = document.querySelector('.sidebar_action')
+
+sidebarOpen.addEventListener('click', () => {
+    sidebarAction.classList.remove('sidebar_action');
+});
+sidebarClose.addEventListener('click', () => {
+    sidebarAction.classList.add('sidebar_action');
+});
+
+
 // Projects
 const workBtnContainer = document.querySelector('.work_categories');
 const projectContainer = document.querySelector('.work_projects');
