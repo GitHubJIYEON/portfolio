@@ -11,6 +11,8 @@
     />
     <meta name="author" content="Jiyeon Lee" />
     <!-- 웹대표이미지 <link rel="icon" type="image/png" href=".png" /> -->
+
+    
     <script src="https://kit.fontawesome.com/39f0d4ac98.js" crossorigin="anonymous"></script>    <!-- 구글폰트 -->
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&family=Josefin+Sans:wght@400;600;700&family=Montserrat:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&family=Josefin+Sans:wght@400;600;700&family=Montserrat:wght@400;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">    
@@ -18,82 +20,133 @@
     href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Gothic&family=Noto+Sans+KR:wght@400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap" 
     rel="stylesheet"> -->
     
+    <!-- CSS STYLE -->
+
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 <body>
-<!-- Navbar -->
-<nav id="navbar">
+  <!-- Navbar -->
+  <nav id="navbar">
     <div class="navbar_logo">
-        <!-- <i class="fab fa-diaspora"></i> -->
-        <a href="#">
-          <span>JIYEON</span>
-        </a>
+      <a href="#">
+        <span>JIYEON</span>
+      </a>
     </div>
     <div class="navbar_menu">
-        <ul class="navbar_menu">
-            <li class="navbar_menu_item active" data-link="#home">Home</li>
-            <li class="navbar_menu_item" data-link="#about">About</li>
-            <li class="navbar_menu_item" data-link="#skills">Skills</li>
-            <li class="navbar_menu_item" data-link="#work">Work</li>
-            <li class="navbar_menu_item" data-link="#testimonial">Testimonial</li>
-            <li class="navbar_menu_item" data-link="#contact">contact</li>
-        </ul>
-        <button class="more_open sidebar_open"><i class="fa-solid fa-bars"></i></button>
+      <ul class="navbar_menu">
+        <li class="navbar_menu_item active" data-link="#home">Home</li>
+        <li class="navbar_menu_item" data-link="#about">About</li>
+        <li class="navbar_menu_item" data-link="#skills">Skills</li>
+        <li class="navbar_menu_item" data-link="#work">Work</li>
+        <li class="navbar_menu_item" data-link="#testimonial">Testimonial</li>
+        <li class="navbar_menu_item" data-link="#contact">contact</li>
+      </ul>
+      <button class="more_open sidebar_open"><i class="fa-solid fa-bars"></i></button>
     </div>
 
-  <!-- Toggle button -->
-  <button class="navbar_toggle-btn">
+    <!-- Toggle button -->
+    <button class="navbar_toggle-btn">
       <i class="fas fa-bars" ></i>
-  </button>
-</nav>
-    <!-- side bar -->
-<div class="sidebar sidebar_action">
-<!-- <div class="sidebar"> -->
-  <button class="more_close"><i class="fa-regular fa-x sidebar_close"></i></button>
-  <div class="more_lists">
-    <img src="./imgs/JIYEONLEE_long.jpg" alt="more_img" class="open_img">
-    <div class="text_div">CONTACT ME</div>
-    <div class="text_info">jiyeon2954@gmail.com</div>
-    <div class="text_info">010 - 8582 - 2954</div>
-    <div class="icon_lists">
-      <a href="https://github.com/GitHubJIYEON" target="_blank"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.notion.so/publicforu/Rachel-Nociton-660a4e8f5c7e4b799f8f6a0ccee04807" target="_blank"><img src="./svg/icons8-notion.svg" alt="notion_icon"></a>
-      <a href="https://tistory-justgoforit.tistory.com/" target="_blank"><i class="fa-brands fa-blogger"></i></a>
+    </button>
+  </nav>
+
+  <!-- side bar -->
+  <div class="sidebar sidebar_action">
+    <button class="more_close"><i class="fa-regular fa-x sidebar_close"></i></button>
+    <div class="more_lists">
+      <img src="./imgs/JIYEONLEE_long.jpg" alt="more_img" class="open_img">
+      <div class="text_div">CONTACT ME</div>
+      <div class="text_info">jiyeon2954@gmail.com</div>
+      <div class="text_info">010 - 8582 - 2954</div>
+      <div class="icon_lists">
+        <a href="https://github.com/GitHubJIYEON" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.notion.so/publicforu/Rachel-Nociton-660a4e8f5c7e4b799f8f6a0ccee04807" target="_blank"><img src="./svg/icons8-notion.svg" alt="notion_icon"></a>
+        <a href="https://tistory-justgoforit.tistory.com/" target="_blank"><i class="fa-brands fa-blogger"></i></a>
+      </div>
     </div>
   </div>
-</div>
-  
+  <!-- //Navbar -->
 
-<!-- //Navbar -->
-<!-- Home -->
-<section id="home" >
-  <div class="home_container">
-    <!-- <div class="home_my">
-      <h1>MY PORTFOLIO</h1>
+  <!-- Home -->
+  <section id="home" >
+    <div class="home_container">
+      <!-- <div class="home_my">
+        <h1>MY PORTFOLIO</h1>
+      </div>
+      <div class="home_img_container">
+        <img src="imgs/home/be_better.png.png" alt="home_bg" class="home_bg">
+        <img src="imgs/home/jy_no_bg.png" alt="home_avatar" class="home_avatar">
+      </div>  -->
+      <h1 class="home_title">Hello, <br /> I am front-end developer</h1>
+      <h2 class="home_description">I wnat to create an ingenious websites with you</h2>
+      <button class="home_contact">Contact Me</button>
     </div>
-    <div class="home_img_container">
-      <img src="imgs/home/be_better.png.png" alt="home_bg" class="home_bg">
-      <img src="imgs/home/jy_no_bg.png" alt="home_avatar" class="home_avatar">
+  </section>
+  <!-- //Home -->
+
+
+  <!-- About -->
+  <section id="about" class="section">
+    <h1>About me</h1>
+    <!-- <img src="./imgs/about/about_01.jpg" alt="about" width="400px">
+    <img src="./imgs/about/about_02.jpg" alt="about" width="300px">
+    <img src="./imgs/about/about_03.png" alt="about" width="400px"> -->
+    
+    <!-- <div class="about_container">
+      <div class="your-class" >
+        <div><img src="./imgs/about/about_01.jpg" alt="img" width="400px"></div>
+        <div><img src="./imgs/about/about_02.jpg" alt="img" width="400px"></div>
+        <div><img src="./imgs/about/about_pic4.jpg" alt="img" width="400px"></div>
+      </div>
     </div>  -->
-    <h1 class="home_title">Hello, <br /> I am front-end developer</h1>
-    <h2 class="home_description">I wnat to create an ingenious websites with you</h2>
-    <button class="home_contact">Contact Me</button>
-  </div>
-</section>
+    	<!-- stlye 은 slick 영역 확인용 -->
+	<div class="about_container" style="background-color: wheat;">
+	  	<div class="about_slick" id="slider-div"  >
+		    <div><img src="./imgs/about/about_01.jpg" alt="img" class="about_img"></div>
+        <div class="about_text_container"><h2>제목</h2><p class="about_text">테스트 성공해라 </p></div> 
+		    <div><img src="./imgs/about/about_02.jpg" alt="img" class="about_img"></div>
+        <div class="about_text_container"><h2>제목</h2><p class="about_text">테스트 성공해라 </p></div> 
+		    <div><img src="./imgs/about/about_pic4.jpg" alt="img" class="about_img"></div>
+        <div class="about_text_container"><h2>제목</h2><p class="about_text"> 테스트 성공해라 </p></div> 
+  	    <div><img src="./imgs/about/about_02.jpg" alt="img" class="about_img"></div>
+        <div class="about_text_container"><h2>제목</h2><p class="about_text">테스트 성공해라 </p></div> 
+
+		    <!-- <div>4</div>
+		    <div>5</div>
+		    <div>6</div> -->
+
+	  	</div>
+	</div>
 
 
-<!-- //Home -->
 
+  <!-- <div class="about_container">
+    <img src="./svg/arrow.svg" alt="arrow" class="about_arrow rotate">
+          
+      <div class="about_box">
+        <div class="about_img">
+          <img src="" alt="">
+        </div>
+        <div class="about_text"></div>
+      </div>
 
-<!-- About -->
-<section id="about" class="section">
-  <h1>About me</h1>
-  <!-- <img src="./imgs/about/about_01.jpg" alt="about" width="400px">
-  <img src="./imgs/about/about_02.jpg" alt="about" width="300px">
-  <img src="./imgs/about/about_03.png" alt="about" width="400px"> -->
-  
-  <div class="about_container">
+        <div class="about_box">
+            <div class="about_img">
+              <img src="" alt="">
+            </div>
+            <div class="about_text"></div>
+        </div>
+
+        <img src="./svg/arrow.svg" alt="arrow" class="about_arrow">
+
+  </div> -->
+
+    
+  <!-- <div class="about_container">
     <img src="./svg/arrow.svg" alt="arrow" class="about_arrow rotate">
       <div class="about_box">
         <div class="about_img">
@@ -106,7 +159,7 @@
         <div class="about_text"></div>
       </div>
     <img src="./svg/arrow.svg" alt="arrow" class="about_arrow">
-  </div>
+  </div> -->
 
 
 
@@ -161,10 +214,10 @@
             <p class="job">Codestates</p>
         </div>
     </div>   -->
-</section>
-<!-- //About -->
-<!-- Skills -->
-<section id="skills" class="section">
+  </section>
+  <!-- //About -->
+  <!-- Skills -->
+  <section id="skills" class="section">
       <!-- <div class="section_container">
         <h1>Skills</h1>
         <h2>Skills & Attributes</h2>
@@ -304,272 +357,221 @@
           </div> -->
       </div>
     </section>
-<!-- skill띠 -->
+  <!-- skill띠 -->
   <div class="animated-title">
     <div class="track">
       <div class="content">&nbsp; SKILL : &nbsp; * HTML&nbsp; * CSS&nbsp; * JAVASCRIPT&nbsp; * REACT&nbsp; * GITHUB&nbsp;SKILL&nbsp; * HTML&nbsp; * CSS&nbsp; * JAVASCRIPT&nbsp; * REACT&nbsp; * GITHUB</div>
     </div>
   </div>
+  <!-- //Skills -->
 
-
-<!-- //Skills -->
-<!-- Work -->
-<section id="work" class="section">
-  <div class="section_container">
-    <h1>Work</h1>
-    <!-- <h3>Project</h3> -->
-
-      <div class="work_categories">
-        <button class="category_btn selected" data-filter="*">
-          All<span class="category_count">8</span>
-        </button>
-        <button class="category_btn" data-filter="javascript">
-          JavaScript<span class="category_count">8</span>
-        </button>
-        <button class="category_btn" data-filter="react">
-          React<span class="category_count">8</span>
-        </button>
-        <button class="category_btn" data-filter="animation">
-          animation<span class="category_count">8</span>
-        </button>
-      </div>
-      <div class="work_projects">
-        <a href="#" class="project" target="_blank" data-type="javascript">
-          <img src="./imgs/projects/youtube.png" alt="" class="project_img">
-          <div class="project_description">
-            <h3>youtube Site</h3>
-            <span>Clone coding with HTML and CSS</span>
-          </div>
-        </a>
-        <a href="#" class="project" target="_blank" data-type="react">
-          <img src="./imgs/projects/youtube.png" alt="" class="project_img">
-          <div class="project_description">
-            <h3>무슨 Site</h3>
-              <span>Clone coding with HTML and CSS</span>
-          </div>
-        </a>
-        <a href="#" class="project" target="_blank" data-type="animation">
-          <img src="./imgs/projects/navbar.png" alt="" class="project_img">
-          <div class="project_description">
-            <h3>무슨 Site</h3>
-            <span>Clone coding with HTML and CSS</span>
-          </div>
-        </a>
-      </div>
-    
-          <!-- work다시 -->
-    <div class="work_container">
-
-      <!-- project-item -->
-      <div class="work_box">
-        <div class="web_box bg1">
-          <div class="web_img"></div>
-        </div>
-        <div class="web_text">
-          <h3>Team Project</h3>
-          <p>this is with JavaScript this is with JavaScriptthis is with JavaScript</p>
-        </div>
-      </div>
-
-      <div class="work_box">
-        <div class="web_text">
-          <h3>Team Project</h3>
-          <p>this is with JavaScript this is with JavaScriptthis is with JavaScript</p>
-        </div>
-        <div class="web_box bg2">
-          <div class="web_img"></div>
-        </div>
-      </div>
-
-      <div class="work_box">
-        <div class="web_box bg3">
-          <div class="web_img"></div>
-        </div>
-        <div class="web_text">
-          <h3>Team Project</h3>
-          <p>웹표준을 준수하여 만든 사이트입니다. 웹사이트에서 가장 많이 사용되는 팝업, 탭메뉴, 게시판, 슬라이더 등의 다양한 기능을 웹표준에 맞게 제작한 사이트입니다.</p>
-        </div>
-      </div>
-
-      <div class="work_box">
-        <div class="web_text">
-          <h3>Team Project</h3>
-          <p>this is with JavaScript this is with JavaScriptthis is with JavaScript</p>
-        </div>
-        <div class="web_box bg4">
-          <div class="web_img"></div>
-        </div>
-      </div>
-
-      <div class="work_box">
-        <div class="web_box bg5">
-          <div class="web_img"></div>
-        </div>
-        <div class="web_text">
-          <h3>Team Project</h3>
-          <p>this is with JavaScript this is with JavaScriptthis is with JavaScript</p>
-        </div>
-      </div>      
-
-
-    </div>
-  </div>
-</section>
-<!-- //Work -->
-<!-- testimonials -->
-<section id="testimonial" class="section">
+  <!-- Work -->
+  <section id="work" class="section">
     <div class="section_container">
-        <h1>Testimonials</h1>
-        <!-- <h3>See what they say about me</h3> -->
-        <div class="testimonials">
+      <h1>Work</h1>
+      <!-- <h3>Project</h3> -->
 
-          <div class="testimonial">
-            <img 
-            src="./imgs/testimonial/avatar1.png" 
-            alt="People"
-            class="testimonial_avatar"
-            />
-            <div class="testimonial-comment-box view-more-before">
-              <p id="billComent"></p>
-              <button class="testimonial_display_btn">view more <i class="fa-solid fa-arrow-down"></i></button>
-              <p class="name"><a href="#">멘토 Bill</a></p>
-            </div>
-          </div>
-
-          <div class="testimonial">
-            <div class="testimonial-comment-box view-more-before">
-              <p id="bangComent"></p>
-              <button class="testimonial_display_btn">View more <i class="fa-solid fa-arrow-down"></i></button>
-              <p class="name"><a href="#">방 * 린</a></p>
-            </div>
-            <img 
-            src="./imgs/testimonial/avartar2.png" 
-            alt="People"
-            class="testimonial_avatar"
-            />
-          </div>
-
-          <div class="testimonial">
-            <img 
-            src="./imgs/testimonial/avatar3.png" 
-            alt="People"
-            class="testimonial_avatar"
-            />
-            <div class="testimonial-comment-box view-more-before">
-              <p id="choiComent"></p>
-              <button class="testimonial_display_btn">View more <i class="fa-solid fa-arrow-down"></i></button>
-              <p class="name"><a href="#">최 * 정</a></p>
-            </div>
-          </div>
+        <div class="work_categories">
+          <button class="category_btn selected" data-filter="*">
+            All<span class="category_count">8</span>
+          </button>
+          <button class="category_btn" data-filter="javascript">
+            JavaScript<span class="category_count">8</span>
+          </button>
+          <button class="category_btn" data-filter="react">
+            React<span class="category_count">8</span>
+          </button>
+          <button class="category_btn" data-filter="animation">
+            animation<span class="category_count">8</span>
+          </button>
         </div>
-    </div>
-</section>
-<!-- //testimonials -->
-<!-- 움직이는 텍스트 -->
-  <!-- <div class="animated-title">
-    <div class="track">
-      <div class="content">&nbsp;CONTACT ME&nbsp;CONTACT ME&nbsp;CONTACT ME&nbsp;CONTACT ME&nbsp;CONTACT ME&nbsp;CONTACT ME</div>
-    </div>
-  </div> -->
-
-<!-- contact -->
-<section id="contact" class="section">
-  <h1 class="contact_title">CONTACT</h1>
-  <div class="contact_container">
-    <div class="contact_imgbox">
-    <img src="./imgs/contact/contact.jpg" alt="contact_img" class="contact_img">
-    <div>
-      <a href="https://github.com/GitHubJIYEON" target="_blank">#github</a>
-      <a href="https://www.notion.so/publicforu/Rachel-Nociton-660a4e8f5c7e4b799f8f6a0ccee04807" target="_blank">#notion</a>
-      <a href="https://tistory-justgoforit.tistory.com/" target="_blank">#blog</a>
-    </div>
-    </div>
-    <div class="contact_formbox">
-      <form action="#" method="post">
-        <fieldset class="info">
-          <!-- <legend class="ir">개인 정보 입력</legend> -->
-          <input type="text" id="name" name="name" placeholder="Your name">
-          <input type="text" id="email"  name="email" placeholder="Your Email">
-        </fieldset>
-        <fieldset class="info">
-          <!-- <legend class="ir">전하고 싶은 말</legend> -->
-          <textarea name="message" id="message" cols="50" rows="5" placeholder="Type message"></textarea>
-        </fieldset>
-        <button type="submit" id="send_btn">SEND</button>
-      </form>
-
-      <!-- <h1 class="contact_title">CONTACT</h1>
-      <h2 class="contact_email">dream.corder.jiyeon2954@gmail.com</h2>
-      <div class="contact_links">
-          <a href="https://github.com/GitHubJIYEON" target="_blank">
-              <i class="fa fa-linkedin-square"></i>
+        <div class="work_projects">
+          <a href="#" class="project" target="_blank" data-type="javascript">
+            <img src="./imgs/projects/youtube.png" alt="" class="project_img">
+            <div class="project_description">
+              <h3>youtube Site</h3>
+              <span>Clone coding with HTML and CSS</span>
+            </div>
           </a>
-      </div>
-      <p class="contact_rights">
-          2023 Dream come true
-      </p> -->
-    </div>
-  </div>
-</section>
-<!-- //contact --> 
-
-<!-- footer -->
-<footer id="footer">
-  <div class="footer_container">
-    <p>Thanks for visiting my Website.<br>Copyright ⓒ 2023. Jiyeon Lee All rights reserved.</p>
-  </div>
-</footer>
-<!-- //footer -->
-
-<!-- Arrow up -->
-<button class="arrow-up">
-  <i class="fas fa-arrow-up"></i>
-</button>
-
-<!-- 변환하는 텍스쳐 -->
-<!-- <section class='section'>
-    <div class='masthead-image' id='master-container'>
-        <div class='content center'>
-            <h1 id='master'>
-              <div>Hello</div>
-              <div id='master-container-scroller'>
-                <div class='master-container-scroller_item'>
-                  <a class='cta-link' href='#'>Friend</a>
-                </div>
-                <div class='master-container-scroller_item'>
-                  <a class='cta-link' href='#'>Enemy</a>
-                </div>
-                <div class='master-container-scroller_item'>
-                  <a class='cta-link' href='#'>Frenemy</a>.
-                </div>
-                <div class='master-container-scroller_item'>
-                  <a class='cta-link' href='#'>Mom</a>
-                </div>
-                <div class='master-container-scroller_item'>
-                  <a class='cta-link' href='#'>Dad</a>
-                </div>
-                <div class='master-container-scroller_item'>
-                  <a class='cta-link' href='#'>밝은</a>
-                </div>
-                <div class='master-container-scroller_item'>
-                  <a class='cta-link' href='#'>Sister</a>.
-                </div>
-                <div class='master-container-scroller_item'>
-                  <a class='cta-link' href='#'>Son</a>
-                </div>
-                <div class='master-container-scroller_item'>
-                  <a class='cta-link' href='#'>Daughter</a>
-                </div>
-                <div class='master-container-scroller_item'>Friend.</div>
-              </div>
-              <div>Nice to see you.</div>
-            </h1>
+          <a href="#" class="project" target="_blank" data-type="react">
+            <img src="./imgs/projects/youtube.png" alt="" class="project_img">
+            <div class="project_description">
+              <h3>무슨 Site</h3>
+                <span>Clone coding with HTML and CSS</span>
+            </div>
+          </a>
+          <a href="#" class="project" target="_blank" data-type="animation">
+            <img src="./imgs/projects/navbar.png" alt="" class="project_img">
+            <div class="project_description">
+              <h3>무슨 Site</h3>
+              <span>Clone coding with HTML and CSS</span>
+            </div>
+          </a>
         </div>
+      
+            <!-- work다시 -->
+      <div class="work_container">
+
+        <!-- project-item -->
+        <div class="work_box">
+          <div class="web_box bg1">
+            <div class="web_img"></div>
+          </div>
+          <div class="web_text">
+            <h3>Team Project</h3>
+            <p>this is with JavaScript this is with JavaScriptthis is with JavaScript</p>
+          </div>
+        </div>
+
+        <div class="work_box">
+          <div class="web_text">
+            <h3>Team Project</h3>
+            <p>this is with JavaScript this is with JavaScriptthis is with JavaScript</p>
+          </div>
+          <div class="web_box bg2">
+            <div class="web_img"></div>
+          </div>
+        </div>
+
+        <div class="work_box">
+          <div class="web_box bg3">
+            <div class="web_img"></div>
+          </div>
+          <div class="web_text">
+            <h3>Team Project</h3>
+            <p>웹표준을 준수하여 만든 사이트입니다. 웹사이트에서 가장 많이 사용되는 팝업, 탭메뉴, 게시판, 슬라이더 등의 다양한 기능을 웹표준에 맞게 제작한 사이트입니다.</p>
+          </div>
+        </div>
+
+        <div class="work_box">
+          <div class="web_text">
+            <h3>Team Project</h3>
+            <p>this is with JavaScript this is with JavaScriptthis is with JavaScript</p>
+          </div>
+          <div class="web_box bg4">
+            <div class="web_img"></div>
+          </div>
+        </div>
+
+        <div class="work_box">
+          <div class="web_box bg5">
+            <div class="web_img"></div>
+          </div>
+          <div class="web_text">
+            <h3>Team Project</h3>
+            <p>this is with JavaScript this is with JavaScriptthis is with JavaScript</p>
+          </div>
+        </div>      
+
+
+      </div>
     </div>
-</section> -->
+  </section>
+  <!-- //Work -->
 
+  <!-- testimonials -->
+  <section id="testimonial" class="section">
+      <div class="section_container">
+          <h1>Testimonials</h1>
+          <!-- <h3>See what they say about me</h3> -->
+          <div class="testimonials">
 
+            <div class="testimonial">
+              <img 
+              src="./imgs/testimonial/avatar1.png" 
+              alt="People"
+              class="testimonial_avatar"
+              />
+              <div class="testimonial-comment-box view-more-before">
+                <p id="billComent"></p>
+                <button class="testimonial_display_btn">view more <i class="fa-solid fa-arrow-down"></i></button>
+                <p class="name"><a href="#">멘토 Bill</a></p>
+              </div>
+            </div>
 
+            <div class="testimonial">
+              <div class="testimonial-comment-box view-more-before">
+                <p id="bangComent"></p>
+                <button class="testimonial_display_btn">View more <i class="fa-solid fa-arrow-down"></i></button>
+                <p class="name"><a href="#">방 * 린</a></p>
+              </div>
+              <img 
+              src="./imgs/testimonial/avartar2.png" 
+              alt="People"
+              class="testimonial_avatar"
+              />
+            </div>
+
+            <div class="testimonial">
+              <img 
+              src="./imgs/testimonial/avatar3.png" 
+              alt="People"
+              class="testimonial_avatar"
+              />
+              <div class="testimonial-comment-box view-more-before">
+                <p id="choiComent"></p>
+                <button class="testimonial_display_btn">View more <i class="fa-solid fa-arrow-down"></i></button>
+                <p class="name"><a href="#">최 * 정</a></p>
+              </div>
+            </div>
+          </div>
+      </div>
+  </section>
+  <!-- //testimonials -->
+
+  <!-- contact -->
+  <section id="contact" class="section">
+    <h1 class="contact_title">CONTACT</h1>
+    <div class="contact_container">
+      <div class="contact_imgbox">
+      <img src="./imgs/contact/contact.jpg" alt="contact_img" class="contact_img">
+      <div>
+        <a href="https://github.com/GitHubJIYEON" target="_blank">#github</a>
+        <a href="https://www.notion.so/publicforu/Rachel-Nociton-660a4e8f5c7e4b799f8f6a0ccee04807" target="_blank">#notion</a>
+        <a href="https://tistory-justgoforit.tistory.com/" target="_blank">#blog</a>
+      </div>
+      </div>
+      <div class="contact_formbox">
+        <form action="#" method="post">
+          <fieldset class="info">
+            <!-- <legend class="ir">개인 정보 입력</legend> -->
+            <input type="text" id="name" name="name" placeholder="Your name">
+            <input type="text" id="email"  name="email" placeholder="Your Email">
+          </fieldset>
+          <fieldset class="info">
+            <!-- <legend class="ir">전하고 싶은 말</legend> -->
+            <textarea name="message" id="message" cols="50" rows="5" placeholder="Type message"></textarea>
+          </fieldset>
+          <button type="submit" id="send_btn">SEND</button>
+        </form>
+
+        <!-- <h1 class="contact_title">CONTACT</h1>
+        <h2 class="contact_email">dream.corder.jiyeon2954@gmail.com</h2>
+        <div class="contact_links">
+            <a href="https://github.com/GitHubJIYEON" target="_blank">
+                <i class="fa fa-linkedin-square"></i>
+            </a>
+        </div>
+        <p class="contact_rights">
+            2023 Dream come true
+        </p> -->
+      </div>
+    </div>
+  </section>
+  <!-- //contact --> 
+
+  <!-- footer -->
+  <footer id="footer">
+    <div class="footer_container">
+      <p>Thanks for visiting my Website.<br>Copyright ⓒ 2023. Jiyeon Lee All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- //footer -->
+
+  <!-- Arrow up -->
+  <button class="arrow-up">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
 
 </body>
