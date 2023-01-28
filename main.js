@@ -188,34 +188,6 @@ viewMorebtn.forEach(button => {
 //       $(this).removeClass("hover");
 //     }
 //   );
-  
-//about img+text => slick
-// $('.about_slick').slick({
-//   infinite: true,
-//   slidesToShow: 2,
-//   slidesToScroll:2,
-//   autoplay: true,
-//   autoplaySpeed: 3000,
-//   dots: true,
-// });
-
-
-// $('.your-class').slick({
-//   infinite: true,
-//   slidesToShow: 2,
-//   slidesToScroll: 1,
-//   autoplay: true,
-//   autoplaySpeed: 3000,
-//   dots: true,
-// });
-
-// $('.your-class').slick({
-//   slidesToShow: 3,
-//   slidesToScroll: 1,
-//   autoplay: true,
-//   autoplaySpeed: 2000,
-// });
-
 
 $(function () {
   $('#slider-div').slick({
@@ -230,8 +202,8 @@ $(function () {
     autoplaySpeed: 10000, // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
     pauseOnHover: true, // 슬라이드 이동	시 마우스 호버하면 슬라이더 멈추게 설정
     vertical: false, // 세로 방향 슬라이드 옵션
-    prevArrow: "<button type='button' class='slick-prev'>Previous</button>", // 이전 화살표 모양 설정
-    nextArrow: "<button type='button' class='slick-next'>Next</button>", // 다음 화살표 모양 설정
+    prevArrow: "<button type='button' class='slick-prev'></button>", // 이전 화살표 모양 설정
+    nextArrow: "<button type='button' class='slick-next'></button>", // 다음 화살표 모양 설정
     dotsClass: 'slick-dots', //아래 나오는 페이지네이션(점) css class 지정
     draggable: true, //드래그 가능 여부
 

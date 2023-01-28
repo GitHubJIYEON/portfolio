@@ -185,7 +185,7 @@ p {
 .more_open {
   border: 1px solid black;
   background-color: var(--color-dark-white);
-  padding: 26px 32px;
+  padding: 26.8px 32px;
 }
 
 .sidebar{
@@ -334,7 +334,7 @@ p {
 
 /* About */
 #about {
-   background-color: var(--color-dark-white);
+   background-color: var(--color-light-white);
 }
 /* //이미지 3개 */
 /* @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
@@ -462,7 +462,7 @@ figure.about_img.hover p {
 .about_container {
   width: 1200px;
   margin: auto;
-  padding: 0 100px;
+  padding: 40px 100px 0 100px;
 }
 .about_slick {
 
@@ -490,9 +490,9 @@ figure.about_img.hover p {
 }
 
 .about_img {
-  width: 450px;
+  width: 460px;
   height: 550px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin: auto;
   position: inherit;
   top: 100px;
@@ -510,19 +510,26 @@ figure.about_img.hover p {
 }
 
 .slick-prev {
-  width: 30px;
-  height: 15px;
+  width: 50px;
+  height: 50px;
   background: url(./svg/arrow.svg) no-repeat 0 0;
-
+  transform: rotate( 180deg );
 
   position: absolute;
     left: -100px;
     bottom: 50%;
 }
 .slick-next {
-   position: absolute;
-    right: -100px;
-    bottom: 50%;
+  width: 50px;
+  height: 50px;
+  background: url(./svg/arrow.svg) no-repeat 0 0;
+  position: absolute;
+  right: -100px;
+  bottom: 50%;
+}
+.slick-dots{
+  display: flex;
+  justify-content: center;
 }
 
 /* ------ */
@@ -568,7 +575,7 @@ figure.about_img.hover p {
 } */
 
 #skills {
-  background-color: var(--color-dark-white);
+  background-color: var(--color-light-white);
 }
 
 .skillset {
@@ -918,7 +925,7 @@ figure.about_img.hover p {
   /* justify-content: space-evenly; */
   justify-content: center;
   align-items: center;
-  /* margin: 40px; */
+  margin: 40px;
 }
 .contact_imgbox{
   display: block;
@@ -927,7 +934,7 @@ figure.about_img.hover p {
 
 .contact_img{
   /* display: flex; */
-  width: 700px;
+  width: 600px;
   /* height: 460px; */
   margin: 20px;
 }
@@ -940,15 +947,9 @@ figure.about_img.hover p {
   justify-content: space-between;
   border-style: none;
   padding: 0;
-  margin: 20px;
+  margin: 10px;
 }
-/* .ir {
-  display: block;
-  overflow: hidden;
-  font-size: 0;
-  line-height: 0;
-  text-indent: -9999px;
-} */
+
 .contact_formbox input:focus {
   color: var(--color-dark-brown)
 }
@@ -957,16 +958,16 @@ figure.about_img.hover p {
   border-radius: 4px;
   font-weight: 100;
   font-size: var(--font-regular);
-  padding: 20px;    
+  padding: 10px;    
   border: 1px solid #A9CBFA;
   margin: 10px 8px;
 }
 
 .contact_formbox .info textarea{
   resize: none;
-  font-size: var(--font-regular);
+  font-size: var(--font-small);
   letter-spacing: 0.8px;
-  margin: 20px 10px;
+  margin: 10px;
   padding: 20px;
   width: 100%;
   height: 100%;
@@ -983,10 +984,10 @@ figure.about_img.hover p {
   transition: all var(--animation-duration) ease-in;
   font-size: var(--font-regular);
   padding: 10px;
-  margin: 20px;
   border: 1px solid #A9CBFA;
-  border-radius: 4px;
+  border-radius: var(--size-border-radius);
   background-color: #A9CBFA;
+  font-size: var(--font-small);
 }
 
 .contact_email,
