@@ -31,10 +31,10 @@ navbarMenu.addEventListener('click', (event) => {
 });
 
 // navbar toggle button for small screen 
-const navbarToggleBtn = document.querySelector('.navbar_toggle-btn');
-navbarToggleBtn.addEventListener('click', () => {
-    navbarMenu.classList.toggle('open');
-});
+// const navbarToggleBtn = document.querySelector('.navbar_toggle-btn');
+// navbarToggleBtn.addEventListener('click', () => {
+//     navbarMenu.classList.toggle('open');
+// });
 
 
 //Handle click on "contact me" button on home
@@ -67,18 +67,86 @@ arrowUp.addEventListener('click', (event) => {
     
 })
 
-//side bar open & close
-const sidebarOpen = document.querySelector('.sidebar_open');
-const sidebarClose = document.querySelector('.sidebar_close');
-const sidebarAction = document.querySelector('.sidebar_action')
-
-sidebarOpen.addEventListener('click', () => {
-    sidebarAction.classList.remove('sidebar_action');
+//contact open & close
+const contactOpenBtn = document.querySelector('#contact_open_btn'); //user아이콘
+const contactCloseBtn = document.querySelector('.contact_close'); //열린 user창 X 아이콘
+const contactAction = document.querySelector('.contact_action'); //user 눌렀을 때 정보
+console.log('contactOpenBtn: ', contactOpenBtn);
+contactOpenBtn.addEventListener('click', () => {
+  console.log('ccc')
+    contactAction.classList.remove('contact_action');
 });
-sidebarClose.addEventListener('click', () => {
-    sidebarAction.classList.add('sidebar_action');
+contactCloseBtn.addEventListener('click', () => {
+    contactAction.classList.add('contact_action');
 });
 
+//menu open & close
+const menuOpenBtn = document.querySelector('#menu_open_btn'); //menu아이콘
+// const menuCloseBtn = document.querySelector('#menu_close_btn');
+const menuSideContent = document.querySelector('#menu-side-content'); //menu
+// menuOpenBtn.addEventListener('click', () => {
+//   console.log('vvv');
+//   menuSideContent.style.cssText = "display: block";
+//   // menu 내용 열기
+// });
+// menuCloseBtn.addEventListener('click', () => {
+//   console.log('aaa');
+//   menuSideContent.style.cssText = 'display: none';
+//   // menu 내용 열기
+// });;
+// menu아이콘 눌렀을때 menu들 이 display block
+// menu아이콘 누르면 menu들  display none
+menuOpenBtn.addEventListener('click', () => {
+  // menuSideContent.classList.remove('');
+  if (menuSideContent.style.display === 'none'){
+    menuSideContent.style.display = 'block';
+  } else{
+    menuSideContent.style.display = 'none';
+  }
+})
+
+//About - slick 
+$(function () {
+  $('#slider-div').slick({
+    slide: 'div', //슬라이드 되어야 할 태그 ex) div, li
+    infinite: true, //무한 반복 옵션
+    slidesToShow: 2, // 한 화면에 보여질 컨텐츠 개수
+    slidesToScroll: 2, //스크롤 한번에 움직일 컨텐츠 개수
+    speed: 100, // 다음 버튼 누르고 다음 화면 뜨는데까지 걸리는 시간(ms)
+    arrows: true, // 옆으로 이동하는 화살표 표시 여부
+    dots: true, // 스크롤바 아래 점으로 페이지네이션 여부
+    autoplay: true, // 자동 스크롤 사용 여부
+    autoplaySpeed: 10000, // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
+    pauseOnHover: true, // 슬라이드 이동	시 마우스 호버하면 슬라이더 멈추게 설정
+    vertical: false, // 세로 방향 슬라이드 옵션
+    prevArrow: "<button type='button' class='slick-prev'></button>", // 이전 화살표 모양 설정
+    nextArrow: "<button type='button' class='slick-next'></button>", // 다음 화살표 모양 설정
+    dotsClass: 'slick-dots', //아래 나오는 페이지네이션(점) css class 지정
+    draggable: true, //드래그 가능 여부
+    customPaging : function(slider, i) {
+    var thumb = $(slider.$slides[i]).data();
+    return '<a class="dot"></a>';
+  },
+
+    responsive: [
+      // 반응형 웹 구현 옵션
+      {
+        breakpoint: 960, //화면 사이즈 960px
+        settings: {
+          //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768, //화면 사이즈 768px
+        settings: {
+          //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+          slidesToShow: 2,
+        },
+      },
+    ],
+  });
+});
 
 // Projects
 const workBtnContainer = document.querySelector('.work_categories');
@@ -179,50 +247,3 @@ viewMorebtn.forEach(button => {
       }
     });
 })
-
-
-// 이미지 3개
-  /* Demo purposes only */
-//   $(".hover").mouseleave(
-//     function () {
-//       $(this).removeClass("hover");
-//     }
-//   );
-
-$(function () {
-  $('#slider-div').slick({
-    slide: 'div', //슬라이드 되어야 할 태그 ex) div, li
-    infinite: true, //무한 반복 옵션
-    slidesToShow: 2, // 한 화면에 보여질 컨텐츠 개수
-    slidesToScroll: 2, //스크롤 한번에 움직일 컨텐츠 개수
-    speed: 100, // 다음 버튼 누르고 다음 화면 뜨는데까지 걸리는 시간(ms)
-    arrows: true, // 옆으로 이동하는 화살표 표시 여부
-    dots: true, // 스크롤바 아래 점으로 페이지네이션 여부
-    autoplay: true, // 자동 스크롤 사용 여부
-    autoplaySpeed: 10000, // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
-    pauseOnHover: true, // 슬라이드 이동	시 마우스 호버하면 슬라이더 멈추게 설정
-    vertical: false, // 세로 방향 슬라이드 옵션
-    prevArrow: "<button type='button' class='slick-prev'></button>", // 이전 화살표 모양 설정
-    nextArrow: "<button type='button' class='slick-next'></button>", // 다음 화살표 모양 설정
-    dotsClass: 'slick-dots', //아래 나오는 페이지네이션(점) css class 지정
-    draggable: true, //드래그 가능 여부
-
-    responsive: [
-      // 반응형 웹 구현 옵션
-      {
-        breakpoint: 960, //화면 사이즈 960px
-        settings: {
-          //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 768, //화면 사이즈 768px
-        settings: {
-          //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
-          slidesToShow: 2,
-        },
-      },
-    ],
-  });
-});
