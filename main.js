@@ -4,69 +4,117 @@
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
-    // console.log(`window.scrollY: ${window.scrollY}`);
-    // console.log(`navbarHeight: ${navbarHeight}`);
+  // console.log(`window.scrollY: ${window.scrollY}`);
+  // console.log(`navbarHeight: ${navbarHeight}`);
 
-    if(window.scrollY > navbarHeight) {
-        navbar.classList.add('navbar-dark');
-    } else {
-        navbar.classList.remove('navbar-dark')
-    }
-})
+  if (window.scrollY > navbarHeight) {
+    navbar.classList.add('navbar-dark');
+  } else {
+    navbar.classList.remove('navbar-dark');
+  }
+});
 
 //Handle scrolling when tapping on the navbar menu
 //section선택하면 그 위치로 이동!
 const navbarMenuList = document.querySelectorAll('.navbar_data');
 console.log('navbarMenuList: ', navbarMenuList);
 
-navbarMenuList.forEach( navbarMenu => {
+navbarMenuList.forEach((navbarMenu) => {
   navbarMenu.addEventListener('click', (event) => {
-  console.log('11')
+    console.log('11');
     const target = event.target;
     const targetElement = target.dataset.targetElement;
     if (targetElement == null) {
       return;
     }
     scrollIntoView(targetElement);
-});
+  });
 });
 
-// navbar toggle button for small screen 
+const downAnimationList = document.querySelectorAll('.down-animation');
+console.log('downAnimationList: ', downAnimationList);
+
+let isMouseOverEvent = false;
+let backgroundPositionY = 0;
+let mouseLeaveTimer = '';
+let mouseOverTimer = '';
+
+downAnimationList.forEach((downAnimationItem) => {
+  console.log('downAnimationItem: ', downAnimationItem);
+
+  downAnimationItem.addEventListener('mouseover', () => {
+    if (mouseLeaveTimer) {
+      clearTimeout(mouseLeaveTimer);
+    }
+    if (!isMouseOverEvent) {
+      isMouseOverEvent = true;
+      console.log('downAnimationItem mouseover');
+      mouseOverTimer = setInterval(() => {
+        if (backgroundPositionY < 100) {
+          backgroundPositionY += 0.1;
+        }
+        if (backgroundPositionY >= 100) {
+          clearTimeout(mouseOverTimer);
+        }
+        downAnimationItem.children[0].style.backgroundPositionY = `${backgroundPositionY}%`;
+      }, 1);
+    }
+  });
+
+  downAnimationItem.addEventListener('mouseleave', () => {
+    if (mouseOverTimer) {
+      clearTimeout(mouseOverTimer);
+    }
+    if (isMouseOverEvent) {
+      isMouseOverEvent = false;
+      console.log('downAnimationItem mouseleave');
+      mouseLeaveTimer = setInterval(() => {
+        if (backgroundPositionY > 0) {
+          backgroundPositionY -= 0.2;
+        }
+        if (backgroundPositionY <= 0) {
+          clearTimeout(mouseLeaveTimer);
+        }
+        downAnimationItem.children[0].style.backgroundPositionY = `${backgroundPositionY}%`;
+      }, 1);
+    }
+  });
+});
+
+// navbar toggle button for small screen
 // const navbarToggleBtn = document.querySelector('.navbar_toggle-btn');
 // navbarToggleBtn.addEventListener('click', () => {
 //     navbarMenu.classList.toggle('open');
 // });
 
-
 //Handle click on "contact me" button on home
 const homeContactBtn = document.querySelector('.home_contact');
 homeContactBtn.addEventListener('click', () => {
-    scrollIntoView('#contact');
+  scrollIntoView('#contact');
 });
 
 //make home slowly fade to transparent as the window scrolls down
 const home = document.querySelector('.home_container');
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
-    // console.log(homeHeight)
-    home.style.opacity = 1 - window.scrollY / homeHeight;
+  // console.log(homeHeight)
+  home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
 //Show "arrow up" button when scrolling down
-const arrowUp = document.querySelector(".arrow-up")
+const arrowUp = document.querySelector('.arrow-up');
 document.addEventListener('scroll', () => {
-    if(window.scrollY > homeHeight / 2) {
-        arrowUp.classList.add('visible');
-    } else {
-        arrowUp.classList.remove('visible')
-    }
+  if (window.scrollY > homeHeight / 2) {
+    arrowUp.classList.add('visible');
+  } else {
+    arrowUp.classList.remove('visible');
+  }
 });
 
 //Handle Click on the "arrow up" button
 arrowUp.addEventListener('click', (event) => {
-    scrollIntoView('#home')
-    
-})
+  scrollIntoView('#home');
+});
 
 //contact open & close
 const contactOpenBtn = document.querySelector('#contact_open_btn'); //user아이콘
@@ -74,11 +122,11 @@ const contactCloseBtn = document.querySelector('.contact_close'); //열린 user�
 const contactAction = document.querySelector('.contact_action'); //user 눌렀을 때 정보
 console.log('contactOpenBtn: ', contactOpenBtn);
 contactOpenBtn.addEventListener('click', () => {
-  console.log('ccc')
-    contactAction.classList.remove('contact_action');
+  console.log('ccc');
+  contactAction.classList.remove('contact_action');
 });
 contactCloseBtn.addEventListener('click', () => {
-    contactAction.classList.add('contact_action');
+  contactAction.classList.add('contact_action');
 });
 
 //menu open & close
@@ -99,14 +147,14 @@ const menuSideContent = document.querySelector('#menu-side-content'); //menu
 // menu아이콘 누르면 menu들  display none
 menuOpenBtn.addEventListener('click', () => {
   // menuSideContent.classList.remove('');
-  if (menuSideContent.style.display === 'none'){
+  if (menuSideContent.style.display === 'none') {
     menuSideContent.style.display = 'block';
-  } else{
+  } else {
     menuSideContent.style.display = 'none';
   }
-})
+});
 
-//About - slick 
+//About - slick
 $(function () {
   $('#slider-div').slick({
     slide: 'div', //슬라이드 되어야 할 태그 ex) div, li
@@ -124,10 +172,10 @@ $(function () {
     nextArrow: "<button type='button' class='slick-next'></button>", // 다음 화살표 모양 설정
     dotsClass: 'slick-dots', //아래 나오는 페이지네이션(점) css class 지정
     draggable: true, //드래그 가능 여부
-    customPaging : function(slider, i) {
-    var thumb = $(slider.$slides[i]).data();
-    return '<a class="dot"></a>';
-  },
+    customPaging: function (slider, i) {
+      var thumb = $(slider.$slides[i]).data();
+      return '<a class="dot"></a>';
+    },
 
     responsive: [
       // 반응형 웹 구현 옵션
@@ -155,37 +203,37 @@ const projectContainer = document.querySelector('.work_projects');
 const projects = document.querySelectorAll('.project');
 
 workBtnContainer.addEventListener('click', (e) => {
-    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-    if(filter == null){
-        return;
-    }
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if (filter == null) {
+    return;
+  }
 
+  //선택된 아이템 select 없애고 새로 클릭된 아이템에 active 붙이기
+  const active = document.querySelector('.category_btn.selected');
+  active.classList.remove('selected');
+  const target =
+    e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+  target.classList.add('selected');
 
-    //선택된 아이템 select 없애고 새로 클릭된 아이템에 active 붙이기
-    const active = document.querySelector('.category_btn.selected');
-    active.classList.remove('selected');
-    const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
-    target.classList.add('selected')
-
-    // console.log(filter);
-    projectContainer.classList.add('anim-out')
-    setTimeout(() => {
-        projects.forEach((project) => {
-            console.log(project.dataset.type);
-            if (filter === '*' || filter === project.dataset.type) {
-                project.classList.remove('invisible');
-            } else {
-                project.classList.add('invisible');
-            }
-            });    
-        projectContainer.classList.remove('anim-out')
-    }, 300);
-})
+  // console.log(filter);
+  projectContainer.classList.add('anim-out');
+  setTimeout(() => {
+    projects.forEach((project) => {
+      console.log(project.dataset.type);
+      if (filter === '*' || filter === project.dataset.type) {
+        project.classList.remove('invisible');
+      } else {
+        project.classList.add('invisible');
+      }
+    });
+    projectContainer.classList.remove('anim-out');
+  }, 300);
+});
 
 function scrollIntoView(elementName) {
   console.log('scrollIntoView: ', elementName);
-    const scrollTo = document.querySelector(elementName);
-    scrollTo.scrollIntoView({ behavior: 'smooth'});
+  const scrollTo = document.querySelector(elementName);
+  scrollTo.scrollIntoView({ behavior: 'smooth' });
 }
 
 //Testimonials - p태그
@@ -225,27 +273,33 @@ const testimonialCommentBox = document.querySelectorAll(
   '.testimonial-comment-box'
 );
 
-viewMorebtn.forEach(button => {
-    button.addEventListener('click', (event) => {
-      console.log('view more button click !!!');
+viewMorebtn.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    console.log('view more button click !!!');
 
-      console.log(event.target);
-      console.log(event.target.children);
-      console.log(event.target.children[0].classList);
-      console.log(event.target.children[0].classList.contains('fa-arrow-down'));
+    console.log(event.target);
+    console.log(event.target.children);
+    console.log(event.target.children[0].classList);
+    console.log(event.target.children[0].classList.contains('fa-arrow-down'));
 
-      console.log(event.target);
-      console.log(event.target.parentElement);
-      console.log(event.target.parentElement.classList);
+    console.log(event.target);
+    console.log(event.target.parentElement);
+    console.log(event.target.parentElement.classList);
 
-      if (event.target.children[0].classList.contains('fa-arrow-down')){
-        // 더보기 닫혔을 때 열기
-        event.target.children[0].classList.replace('fa-arrow-down', 'fa-arrow-up');
-        event.target.parentElement.classList.remove('view-more-before');
-      }else{
-        // 더보기 열렸을 때 닫기
-        event.target.children[0].classList.replace('fa-arrow-up', 'fa-arrow-down');
-        event.target.parentElement.classList.add('view-more-before');
-      }
-    });
-})
+    if (event.target.children[0].classList.contains('fa-arrow-down')) {
+      // 더보기 닫혔을 때 열기
+      event.target.children[0].classList.replace(
+        'fa-arrow-down',
+        'fa-arrow-up'
+      );
+      event.target.parentElement.classList.remove('view-more-before');
+    } else {
+      // 더보기 열렸을 때 닫기
+      event.target.children[0].classList.replace(
+        'fa-arrow-up',
+        'fa-arrow-down'
+      );
+      event.target.parentElement.classList.add('view-more-before');
+    }
+  });
+});

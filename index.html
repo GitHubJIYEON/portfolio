@@ -1,130 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PORTFOLIO</title>
-    <meta
-        name="description"
-        content="Portfolio for front-end"
-    />
+    <meta name="description" content="Portfolio for front-end" />
     <meta name="author" content="Jiyeon Lee" />
     <link rel="icon" type="logo" href="imgs/logo/logo_avartar.png" />
-    
-    <script src="https://kit.fontawesome.com/39f0d4ac98.js" crossorigin="anonymous"></script>    <!-- 구글폰트 -->
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&family=Josefin+Sans:wght@400;600;700&family=Montserrat:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&family=Josefin+Sans:wght@400;600;700&family=Montserrat:wght@400;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">    
+
+    <script
+      src="https://kit.fontawesome.com/39f0d4ac98.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- 구글폰트 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&family=Josefin+Sans:wght@400;600;700&family=Montserrat:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&family=Josefin+Sans:wght@400;600;700&family=Montserrat:wght@400;600;700&family=Pinyon+Script&display=swap"
+      rel="stylesheet"
+    />
     <!-- <link 
     href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Gothic&family=Noto+Sans+KR:wght@400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap" 
     rel="stylesheet"> -->
-    
+
     <!-- CSS STYLE -->
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-</head>
-<body>
-  <!-- Navbar -->
-  <nav id="navbar">
-    <div class="navbar_logo">
-      <a href="#">
-        <span class="logo_name">JIYEON</span>
-      </a>
-    </div>
-    <!-- <div class="navbar_menu"> -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <div class="navbar_logo">
+        <a href="#">
+          <span class="logo_name">JIYEON</span>
+        </a>
+      </div>
+      <!-- <div class="navbar_menu"> -->
       <ul class="navbar_menu navbar_data">
-        <li class="navbar_menu_item active" data-target-element="#home">Home</li>
+        <li class="navbar_menu_item active" data-target-element="#home">
+          Home
+        </li>
         <li class="navbar_menu_item" data-target-element="#about">About</li>
         <li class="navbar_menu_item" data-target-element="#skills">Skills</li>
         <li class="navbar_menu_item" data-target-element="#work">Work</li>
-        <li class="navbar_menu_item" data-target-element="#testimonial">Testimonial</li>
-        <li class="navbar_menu_item" data-target-element="#contact">contact</li>
+        <li class="navbar_menu_item" data-target-element="#testimonial">
+          Testimonial
+        </li>
+        <li class="navbar_menu_item" data-target-element="#contact">Contact</li>
       </ul>
       <!-- <button class="more_open contact_open"><i class="fa-solid fa-bars"></i></button> -->
-      
-    <!-- </div> -->
-    <button class="more_open" id="contact_open_btn"><i class="fa-solid fa-user-plus"></i></button>
-      <button class="more_open" id="menu_open_btn"><i class="fa-solid fa-bars"></i></button>
 
-    <!-- Toggle button -->
-    <!-- <button class="navbar_toggle-btn">
+      <!-- </div> -->
+      <button class="more_open" id="contact_open_btn">
+        <i class="fa-solid fa-user-plus"></i>
+      </button>
+      <button class="more_open" id="menu_open_btn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <!-- Toggle button -->
+      <!-- <button class="navbar_toggle-btn">
       <i class="fas fa-bars" ></i>
     </button> -->
-  </nav>
+    </nav>
 
-  <!-- contact side content -->
-  <div class="contact contact_action">
-    <button class="more_close"><i class="fa-regular fa-x contact_close"></i></button>
-    <div class="more_lists">
-      <img src="./imgs/JIYEONLEE_long.jpg" alt="more_img" class="open_img">
-      <div class="text_div">CONTACT ME</div>
-      <div class="text_info">jiyeon2954@gmail.com</div>
-      <div class="text_info">010 - 8582 - 2954</div>
-      <div class="icon_lists">
-        <a href="https://github.com/GitHubJIYEON" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.notion.so/publicforu/Rachel-Nociton-660a4e8f5c7e4b799f8f6a0ccee04807" target="_blank"><img src="./svg/icons8-notion.svg" alt="notion_icon"></a>
-        <a href="https://tistory-justgoforit.tistory.com/" target="_blank"><i class="fa-brands fa-blogger"></i></a>
+    <!-- contact side content -->
+    <div class="contact contact_action">
+      <button class="more_close">
+        <i class="fa-regular fa-x contact_close"></i>
+      </button>
+      <div class="more_lists">
+        <img src="./imgs/JIYEONLEE_long.jpg" alt="more_img" class="open_img" />
+        <div class="text_div">CONTACT ME</div>
+        <div class="text_info">jiyeon2954@gmail.com</div>
+        <div class="text_info">010 - 8582 - 2954</div>
+        <div class="icon_lists">
+          <a href="https://github.com/GitHubJIYEON" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href="https://www.notion.so/publicforu/Rachel-Nociton-660a4e8f5c7e4b799f8f6a0ccee04807"
+            target="_blank"
+            ><img src="./svg/icons8-notion.svg" alt="notion_icon"
+          /></a>
+          <a href="https://tistory-justgoforit.tistory.com/" target="_blank"
+            ><i class="fa-brands fa-blogger"></i
+          ></a>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- menu side content -->
-  <div class="contact" id="menu-side-content" style="display: none">
-    <!-- <div><div id="menu_close_btn">x button</div></div> -->
-    <ul class="navbar_data">
-      <li data-target-element="#home">Home</li>
-      <li data-target-element="#about">About</li>
-      <li data-target-element="#skills">Skills</li>
-      <li data-target-element="#work">Work</li>
-      <li data-target-element="#testimonial">Testimonial</li>
-      <li data-target-element="#contact">contact</li>
-    </ul>
-  </div>
+    <!-- menu side content -->
+    <div
+      class="contact"
+      id="menu-side-content"
+      style="display: none; height: auto"
+    >
+      <!-- <div><div id="menu_close_btn">x button</div></div> -->
+      <ul class="navbar_data">
+        <li class="navbar_block_list" data-target-element="#home">Home</li>
+        <li class="navbar_block_list" data-target-element="#about">About</li>
+        <li class="navbar_block_list" data-target-element="#skills">Skills</li>
+        <li class="navbar_block_list" data-target-element="#work">Work</li>
+        <li class="navbar_block_list" data-target-element="#testimonial">
+          Testimonial
+        </li>
+        <li class="navbar_block_list" data-target-element="#contact">
+          Contact
+        </li>
+      </ul>
+    </div>
 
-  <!-- //Navbar -->
+    <!-- //Navbar -->
 
-  <!-- Home -->
-  <section id="home" >
-    <div class="home_container">
-      <!-- <div class="home_my">
+    <!-- Home -->
+    <section id="home">
+      <div class="home_container">
+        <!-- <div class="home_my">
         <h1>MY PORTFOLIO</h1>
       </div>
       <div class="home_img_container">
         <img src="imgs/home/be_better.png.png" alt="home_bg" class="home_bg">
         <img src="imgs/home/jy_no_bg.png" alt="home_avatar" class="home_avatar">
       </div>  -->
-      <h1 class="home_title"><br /> I am  </h1>
-      <h2 class="home_description">Don't be the same. Be better</h2>
-      <button class="home_contact">Contact Me</button>
-    </div>
-  </section>
-  <!-- //Home -->
+        <h1 class="home_title">
+          <br />
+          I am
+        </h1>
+        <h2 class="home_description">Don't be the same. Be better</h2>
+        <button class="home_contact">Contact Me</button>
+      </div>
+    </section>
+    <!-- //Home -->
 
-  <!-- About -->
-  <section id="about" class="section">
-    <h1>About me</h1>
-    
-    	<!-- stlye 은 slick 영역 확인용 -->
-	<div class="about_container">
-	  	<div class="about_slick" id="slider-div"  >
-		    <div><img src="./imgs/about/about_01.png" alt="img" class="about_img"></div>
-        <div class="about_text_container"><h2>Active</h2><p class="about_text">테스트 성공해라 </p></div> 
-		    <div><img src="./imgs/about/about_07.png" alt="img" class="about_img"></div>
-        <div class="about_text_container"><h2>제목</h2><p class="about_text">테스트 성공해라 </p></div> 
-		    <div><img src="./imgs/about/about_03.png" alt="img" class="about_img"></div>
-        <div class="about_text_container"><h2>Positive</h2><p class="about_text"> 테스트 성공해라 </p></div> 
-  	    <div><img src="./imgs/about/about_06.png" alt="img" class="about_img"></div>
-        <div class="about_text_container"><h2>Responsive</h2><p class="about_text">테스트 성공해라 </p></div> 
-	  	</div>
-	</div>
+    <!-- About -->
+    <section id="about" class="section">
+      <h1>About me</h1>
 
-  </section>
-  <!-- //About -->
-  <!-- Skills -->
-  <section id="skills" class="section">
+      <!-- stlye 은 slick 영역 확인용 -->
+      <div class="about_container">
+        <div class="about_slick" id="slider-div">
+          <div>
+            <img src="./imgs/about/about_01.png" alt="img" class="about_img" />
+          </div>
+          <div class="about_text_container">
+            <h2>Active</h2>
+            <p class="about_text">테스트 성공해라</p>
+          </div>
+          <div>
+            <img src="./imgs/about/about_07.png" alt="img" class="about_img" />
+          </div>
+          <div class="about_text_container">
+            <h2>제목</h2>
+            <p class="about_text">테스트 성공해라</p>
+          </div>
+          <div>
+            <img src="./imgs/about/about_03.png" alt="img" class="about_img" />
+          </div>
+          <div class="about_text_container">
+            <h2>Positive</h2>
+            <p class="about_text">테스트 성공해라</p>
+          </div>
+          <div>
+            <img src="./imgs/about/about_06.png" alt="img" class="about_img" />
+          </div>
+          <div class="about_text_container">
+            <h2>Responsive</h2>
+            <p class="about_text">테스트 성공해라</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //About -->
+    <!-- Skills -->
+    <section id="skills" class="section">
       <!-- <div class="section_container">
         <h1>Skills</h1>
         <h2>Skills & Attributes</h2>
@@ -178,7 +240,7 @@
             </p>
         </div>
     </div> -->
-        <!-- <p>
+      <!-- <p>
           Experience with all phases of the software life-cycle. Passion for
           learning new technologies. Capable of working within a team environment
           and independently. Ability to plan and time schedule, work under strict
@@ -262,20 +324,24 @@
               </ul>
             </div>
           </div> -->
-      </div>
+      <!-- </div> -->
     </section>
-  <!-- Skills 띠 -->
-  <div class="animated-title">
-    <div class="track">
-      <div class="content">&nbsp; SKILL : &nbsp; * HTML&nbsp; * CSS&nbsp; * JAVASCRIPT&nbsp; * REACT&nbsp; * GITHUB&nbsp;SKILL&nbsp; * HTML&nbsp; * CSS&nbsp; * JAVASCRIPT&nbsp; * REACT&nbsp; * GITHUB</div>
+    <!-- Skills 띠 -->
+    <div class="animated-title">
+      <div class="track">
+        <div class="content">
+          &nbsp; SKILL : &nbsp; * HTML&nbsp; * CSS&nbsp; * JAVASCRIPT&nbsp; *
+          REACT&nbsp; * GITHUB&nbsp;SKILL&nbsp; * HTML&nbsp; * CSS&nbsp; *
+          JAVASCRIPT&nbsp; * REACT&nbsp; * GITHUB
+        </div>
+      </div>
     </div>
-  </div>
-  <!-- //Skills -->
+    <!-- //Skills -->
 
-  <!-- Work -->
-  <section id="work" class="section">
-    <div class="section_container">
-      <h1>Work</h1>
+    <!-- Work -->
+    <section id="work" class="section">
+      <div class="section_container">
+        <h1>Work</h1>
         <div class="work_categories">
           <button class="category_btn selected" data-filter="*">
             All<span class="category_count">8</span>
@@ -292,77 +358,99 @@
         </div>
         <div class="work_projects">
           <a href="#" class="project" target="_blank" data-type="javascript">
-            <img src="./imgs/projects/youtube.png" alt="" class="project_img">
+            <img src="./imgs/projects/youtube.png" alt="" class="project_img" />
             <div class="project_description">
               <h3>youtube Site</h3>
               <span>Clone coding with HTML and CSS</span>
             </div>
           </a>
           <a href="#" class="project" target="_blank" data-type="react">
-            <img src="./imgs/projects/youtube.png" alt="" class="project_img">
+            <img src="./imgs/projects/youtube.png" alt="" class="project_img" />
             <div class="project_description">
               <h3>무슨 Site</h3>
-                <span>Clone coding with HTML and CSS</span>
+              <span>Clone coding with HTML and CSS</span>
             </div>
           </a>
           <a href="#" class="project" target="_blank" data-type="animation">
-            <img src="./imgs/projects/navbar.png" alt="" class="project_img">
+            <img src="./imgs/projects/navbar.png" alt="" class="project_img" />
             <div class="project_description">
               <h3>무슨 Site</h3>
               <span>Clone coding with HTML and CSS</span>
             </div>
           </a>
         </div>
-      
-            <!-- work다시 -->
-      <div class="work_container">
+      </div>
 
+      <!-- work다시 -->
+      <div class="work_container">
         <!-- project-item -->
         <div class="work_box">
-          <div class="web_box bg1">
-            <div class="web_img"></div>
+          <div class="work_box">
+            <a href="https://luxmeal.xyz/" target="_blank">
+              <div class="web_box bg1 down-animation">
+                <!-- <div class="web_img"><a href="https://luxmeal.xyz/" target="_blank"><img src="./imgs/projects/react_luxmeal.png" alt="project1"></a></div> -->
+                <div
+                  class="web_img"
+                  style="
+                    background-image: url(./imgs/projects/react_luxmeal.png);
+                  "
+                ></div>
+              </div>
+            </a>
+            <div class="web_text">
+              <h3>React site (Team Project)</h3>
+              <p>
+                기획부터 구현까지 백엔드 3명 프론트 3명 협업하여 제작한
+                사이트입니다. 사료 추천을 주제로 추천 및 비회원 로그인도
+                가능합니다.
+              </p>
+            </div>
           </div>
-          <div class="web_text">
-            <h3>React site (Team Project)</h3>
-            <p>기획부터 구현까지 백엔드 3명 프론트 3명 협업하여 제작한 사이트입니다. 사료 추천을 주제로 추천 및 비회원 로그인도 가능합니다. </p>
-          </div>
-        </div>
 
-        <div class="work_box">
-          <div class="web_text">
-            <h3>React site</h3>
-            <p>Rapid API 를 활용한 유튜브 리액트 사이트입니다.
-            npm 라이브러리 중에서 react-router-dom, react-player 를 활용하였고,
-            useEffect 훅으로 출력하였습니다. useParams 에 정보를 저장하여
-            출력하는 채널 컨텐츠를 구성하였으며 카테고리 목록, 검색창,
-            영상 플레이, 관련 영상 목록 등을 구현하였습니다.</p>
+          <div class="work_box">
+            <div class="web_text">
+              <h3>React site</h3>
+              <p>
+                Rapid API 를 활용한 유튜브 리액트 사이트입니다. npm 라이브러리
+                중에서 react-router-dom, react-player 를 활용하였고, useEffect
+                훅으로 출력하였습니다. useParams 에 정보를 저장하여 출력하는
+                채널 컨텐츠를 구성하였으며 카테고리 목록, 검색창, 영상 플레이,
+                관련 영상 목록 등을 구현하였습니다.
+              </p>
+            </div>
+            <div class="web_box bg2">
+              <div class="web_img"></div>
+            </div>
           </div>
-          <div class="web_box bg2">
-            <div class="web_img"></div>
-          </div>
-        </div>
 
-        <div class="work_box">
-          <div class="web_box bg3">
-            <div class="web_img"></div>
+          <div class="work_box">
+            <div class="web_box bg3">
+              <div class="web_img"></div>
+            </div>
+            <div class="web_text">
+              <h3>StackoverFlow(Team Project)</h3>
+              <p>
+                Stack Overflow 사이트를 참고하여 백엔드와의 협업 과정을 익힌
+                프로젝트입니다.
+              </p>
+            </div>
           </div>
-          <div class="web_text">
-            <h3>StackoverFlow(Team Project)</h3>
-            <p>Stack Overflow 사이트를 참고하여 백엔드와의 협업 과정을 익힌 프로젝트입니다.</p>
-          </div>
-        </div>
 
-        <div class="work_box">
-          <div class="web_text">
-            <h3>Webstandard</h3>
-            <p>웹표준을 준수하여 만든 사이트입니다. 웹사이트에서 가장 많이 사용되는 팝업, 탭메뉴, 게시판, 슬라이더 등의 다양한 기능을 웹표준에 맞게 제작한 사이트입니다.</p>
+          <div class="work_box">
+            <div class="web_text">
+              <h3>Webstandard</h3>
+              <p>
+                웹표준을 준수하여 만든 사이트입니다. 웹사이트에서 가장 많이
+                사용되는 팝업, 탭메뉴, 게시판, 슬라이더 등의 다양한 기능을
+                웹표준에 맞게 제작한 사이트입니다.
+              </p>
+            </div>
+            <div class="web_box bg4">
+              <div class="web_img"></div>
+            </div>
           </div>
-          <div class="web_box bg4">
-            <div class="web_img"></div>
-          </div>
-        </div>
 
-        <!-- <div class="work_box">
+          <!-- <div class="work_box">
           <div class="web_box bg5">
             <div class="web_img"></div>
           </div>
@@ -371,88 +459,119 @@
             <p>this is with JavaScript this is with JavaScriptthis is with JavaScript</p>
           </div>
         </div>       -->
-
-
+        </div>
       </div>
-    </div>
-  </section>
-  <!-- //Work -->
+    </section>
+    <!-- //Work -->
 
-  <!-- testimonials -->
-  <section id="testimonial" class="section">
+    <!-- testimonials -->
+    <section id="testimonial" class="section">
       <div class="section_container">
-          <h1>Testimonials</h1>
-          <!-- <h3>See what they say about me</h3> -->
-          <div class="testimonials">
-
-            <div class="testimonial">
-              <img 
-              src="./imgs/testimonial/avatar1.png" 
+        <h1>Testimonials</h1>
+        <!-- <h3>See what they say about me</h3> -->
+        <div class="testimonials">
+          <div class="testimonial">
+            <img
+              src="./imgs/testimonial/avatar1.png"
               alt="People"
               class="testimonial_avatar"
-              />
-              <div class="testimonial-comment-box view-more-before">
-                <p id="billComent"></p>
-                <button class="testimonial_display_btn">view more <i class="fa-solid fa-arrow-down"></i></button>
-                <p class="name"><a href="#">멘토 Bill</a></p>
-              </div>
-            </div>
-
-            <div class="testimonial">
-              <div class="testimonial-comment-box view-more-before">
-                <p id="bangComent"></p>
-                <button class="testimonial_display_btn">View more <i class="fa-solid fa-arrow-down"></i></button>
-                <p class="name"><a href="#">방 * 린</a></p>
-              </div>
-              <img 
-              src="./imgs/testimonial/avartar2.png" 
-              alt="People"
-              class="testimonial_avatar"
-              />
-            </div>
-
-            <div class="testimonial">
-              <img 
-              src="./imgs/testimonial/avatar3.png" 
-              alt="People"
-              class="testimonial_avatar"
-              />
-              <div class="testimonial-comment-box view-more-before">
-                <p id="choiComent"></p>
-                <button class="testimonial_display_btn">View more <i class="fa-solid fa-arrow-down"></i></button>
-                <p class="name"><a href="#">최 * 정</a></p>
-              </div>
+            />
+            <div class="testimonial-comment-box view-more-before">
+              <p id="billComent"></p>
+              <button class="testimonial_display_btn">
+                view more <i class="fa-solid fa-arrow-down"></i>
+              </button>
+              <p class="name"><a href="#">멘토 Bill</a></p>
             </div>
           </div>
-      </div>
-  </section>
-  <!-- //testimonials -->
 
-  <!-- contact -->
-  <section id="contact" class="section">
-    <h1 class="contact_title">CONTACT</h1>
-    <div class="contact_container">
-      <div class="contact_imgbox">
-      <img src="./imgs/contact/contact.jpg" alt="contact_img" class="contact_img">
-      <div>
-        <a href="https://github.com/GitHubJIYEON" target="_blank">#github</a>
-        <a href="https://www.notion.so/publicforu/Rachel-Nociton-660a4e8f5c7e4b799f8f6a0ccee04807" target="_blank">#notion</a>
-        <a href="https://tistory-justgoforit.tistory.com/" target="_blank">#blog</a>
-      </div>
-      </div>
-      <div class="contact_formbox">
-        <form action="#" method="post">
-          <fieldset class="info">
-            <input type="text" id="name" name="name" placeholder="Your name">
-            <input type="text" id="email"  name="email" placeholder="Your Email">
-          </fieldset>
-          <fieldset class="info">
-            <textarea name="message" id="message" cols="50" rows="5" placeholder="Type message"></textarea>
-          </fieldset>
-          <button type="submit" id="send_btn">SEND</button>
-        </form>
+          <div class="testimonial">
+            <div class="testimonial-comment-box view-more-before">
+              <p id="bangComent"></p>
+              <button class="testimonial_display_btn">
+                View more <i class="fa-solid fa-arrow-down"></i>
+              </button>
+              <p class="name"><a href="#">방 * 린</a></p>
+            </div>
+            <img
+              src="./imgs/testimonial/avartar2.png"
+              alt="People"
+              class="testimonial_avatar"
+            />
+          </div>
 
-        <!-- <h1 class="contact_title">CONTACT</h1>
+          <div class="testimonial">
+            <img
+              src="./imgs/testimonial/avatar3.png"
+              alt="People"
+              class="testimonial_avatar"
+            />
+            <div class="testimonial-comment-box view-more-before">
+              <p id="choiComent"></p>
+              <button class="testimonial_display_btn">
+                View more <i class="fa-solid fa-arrow-down"></i>
+              </button>
+              <p class="name"><a href="#">최 * 정</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //testimonials -->
+
+    <!-- contact -->
+    <section id="contact" class="section">
+      <h1 class="contact_title">CONTACT</h1>
+      <div class="contact_container">
+        <div class="contact_imgbox">
+          <img
+            src="./imgs/contact/contact.jpg"
+            alt="contact_img"
+            class="contact_img"
+          />
+          <div>
+            <a href="https://github.com/GitHubJIYEON" target="_blank"
+              >#github</a
+            >
+            <a
+              href="https://www.notion.so/publicforu/Rachel-Nociton-660a4e8f5c7e4b799f8f6a0ccee04807"
+              target="_blank"
+              >#notion</a
+            >
+            <a href="https://tistory-justgoforit.tistory.com/" target="_blank"
+              >#blog</a
+            >
+          </div>
+        </div>
+        <div class="contact_formbox">
+          <form action="#" method="post">
+            <fieldset class="info">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+              />
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="Your Email"
+              />
+            </fieldset>
+            <fieldset class="info">
+              <textarea
+                name="message"
+                id="message"
+                cols="50"
+                rows="5"
+                placeholder="Type message"
+              ></textarea>
+            </fieldset>
+            <button type="submit" id="send_btn">SEND</button>
+          </form>
+
+          <!-- <h1 class="contact_title">CONTACT</h1>
         <h2 class="contact_email">dream.corder.jiyeon2954@gmail.com</h2>
         <div class="contact_links">
             <a href="https://github.com/GitHubJIYEON" target="_blank">
@@ -462,22 +581,25 @@
         <p class="contact_rights">
             2023 Dream come true
         </p> -->
+        </div>
       </div>
-    </div>
-  </section>
-  <!-- //contact --> 
+    </section>
+    <!-- //contact -->
 
-  <!-- footer -->
-  <footer id="footer">
-    <div class="footer_container">
-      <p>Thanks for visiting my Website.<br>Copyright ⓒ 2023. Jiyeon Lee All rights reserved.</p>
-    </div>
-  </footer>
-  <!-- //footer -->
+    <!-- footer -->
+    <footer id="footer">
+      <div class="footer_container">
+        <p>
+          Thanks for visiting my Website.<br />Copyright ⓒ 2023. Jiyeon Lee All
+          rights reserved.
+        </p>
+      </div>
+    </footer>
+    <!-- //footer -->
 
-  <!-- Arrow up -->
-  <button class="arrow-up">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-</body>
+    <!-- Arrow up -->
+    <button class="arrow-up">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </body>
 </html>
