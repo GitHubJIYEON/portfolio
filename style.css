@@ -994,6 +994,10 @@ p {
     flex-direction: column;
   }
   .web_text {
+    order: 1;
+  }
+
+  .web_text {
     width: 100%;
     margin: 20px auto;
   }
@@ -1049,7 +1053,7 @@ p {
     padding: 26px 20px;
     /* background-color: var(--color-white); */
   }
-  }
+  
   #menu_open_btn {
     position: absolute;
     right: 0;
