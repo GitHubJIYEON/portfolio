@@ -1049,14 +1049,14 @@ p {
   }
   #contact_open_btn{
     position: absolute;
-    left: 0;
+    right: 0;
     padding: 26px 20px;
     /* background-color: var(--color-white); */
   }
   
   #menu_open_btn {
     position: absolute;
-    right: 0;
+    left: 0;
     padding: 26px 32px;
   }
   /* #menu-side-content{

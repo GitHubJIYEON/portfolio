@@ -16,18 +16,19 @@ document.addEventListener('scroll', () => {
 
 //Handle scrolling when tapping on the navbar menu
 //section선택하면 그 위치로 이동!
-const navbarMenu = document.querySelector('.navbar_menu');
-navbarMenu.addEventListener('click', (event) => {
+const navbarMenuList = document.querySelectorAll('.navbar_data');
+console.log('navbarMenuList: ', navbarMenuList);
+
+navbarMenuList.forEach( navbarMenu => {
+  navbarMenu.addEventListener('click', (event) => {
+  console.log('11')
     const target = event.target;
-    const link = target.dataset.link;
-    if (link == null) {
-        return;
+    const targetElement = target.dataset.targetElement;
+    if (targetElement == null) {
+      return;
     }
-    // console.log(event.target.dataset.link);
-    navbarMenu.classList.remove('open')
-    scrollIntoView(link)
-    // const scrollTo = document.querySelector(link);
-    // scrollTo.scrollIntoView({ behavior: 'smooth'});
+    scrollIntoView(targetElement);
+});
 });
 
 // navbar toggle button for small screen 
@@ -181,8 +182,9 @@ workBtnContainer.addEventListener('click', (e) => {
     }, 300);
 })
 
-function scrollIntoView(selector) {
-    const scrollTo = document.querySelector(selector);
+function scrollIntoView(elementName) {
+  console.log('scrollIntoView: ', elementName);
+    const scrollTo = document.querySelector(elementName);
     scrollTo.scrollIntoView({ behavior: 'smooth'});
 }
 
