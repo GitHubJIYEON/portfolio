@@ -1,27 +1,24 @@
 'use strict';
 
-//navbar 를 투명 & 엘로우
-const navbar = document.querySelector('#navbar');
-const navbarHeight = navbar.getBoundingClientRect().height;
-document.addEventListener('scroll', () => {
-  // console.log(`window.scrollY: ${window.scrollY}`);
-  // console.log(`navbarHeight: ${navbarHeight}`);
+// //navbar 를 투명 & 엘로우
+// const navbar = document.querySelector('#navbar');
+// const navbarHeight = navbar.getBoundingClientRect().height;
+// document.addEventListener('scroll', () => {
+//   // console.log(`window.scrollY: ${window.scrollY}`);
+//   // console.log(`navbarHeight: ${navbarHeight}`);
 
-  if (window.scrollY > navbarHeight) {
-    navbar.classList.add('navbar-dark');
-  } else {
-    navbar.classList.remove('navbar-dark');
-  }
-});
+//   if (window.scrollY > navbarHeight) {
+//     navbar.classList.add('navbar-dark');
+//   } else {
+//     navbar.classList.remove('navbar-dark');
+//   }
+// });
 
-//Handle scrolling when tapping on the navbar menu
-//section선택하면 그 위치로 이동!
+//Navbar section 선택하면 그 선택 위치로 이동
 const navbarMenuList = document.querySelectorAll('.navbar_data');
-console.log('navbarMenuList: ', navbarMenuList);
 
 navbarMenuList.forEach((navbarMenu) => {
   navbarMenu.addEventListener('click', (event) => {
-    console.log('11');
     const target = event.target;
     const targetElement = target.dataset.targetElement;
     if (targetElement == null) {
@@ -31,6 +28,75 @@ navbarMenuList.forEach((navbarMenu) => {
   });
 });
 
+// navbar toggle button for small screen
+// const navbarToggleBtn = document.querySelector('.navbar_toggle-btn');
+// navbarToggleBtn.addEventListener('click', () => {
+//     navbarMenu.classList.toggle('open');
+// });
+
+// "contact me" button on home  contact 으로 이동
+const homeContactBtn = document.querySelector('.home_contact');
+homeContactBtn.addEventListener('click', () => {
+  scrollIntoView('#contact');
+});
+
+//make home slowly fade to transparent as the window scrolls down
+const home = document.querySelector('.home_container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+  // console.log(homeHeight)
+  home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+//Show "arrow up" button when scrolling down
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll', () => {
+  if (window.scrollY > homeHeight / 2) {
+    arrowUp.classList.add('visible');
+  } else {
+    arrowUp.classList.remove('visible');
+  }
+});
+
+// "arrow up" button 누르면 Home으로 이동
+arrowUp.addEventListener('click', (event) => {
+  scrollIntoView('#home');
+});
+
+function scrollIntoView(elementName) {
+  console.log('scrollIntoView: ', elementName);
+  const scrollTo = document.querySelector(elementName);
+  scrollTo.scrollIntoView({ behavior: 'smooth' });
+}
+
+//contact open & close
+const contactOpenBtn = document.querySelector('#contact_open_btn'); //user아이콘
+const contactCloseBtn = document.querySelector('.contact_close'); //열린 user창 X 아이콘
+const contactAction = document.querySelector('.contact_action'); //user 눌렀을 때 정보
+console.log('contactOpenBtn: ', contactOpenBtn);
+contactOpenBtn.addEventListener('click', () => {
+  console.log('ccc');
+  contactAction.classList.remove('contact_action');
+});
+contactCloseBtn.addEventListener('click', () => {
+  contactAction.classList.add('contact_action');
+});
+
+//menu open & close
+const menuOpenBtn = document.querySelector('#menu_open_btn'); //menu아이콘
+// const menuCloseBtn = document.querySelector('#menu_close_btn');
+const menuSideContent = document.querySelector('#menu-side-content'); //menu
+
+menuOpenBtn.addEventListener('click', () => {
+  // menuSideContent.classList.remove('');
+  if (menuSideContent.style.display === 'none') {
+    menuSideContent.style.display = 'block';
+  } else {
+    menuSideContent.style.display = 'none';
+  }
+});
+
+//work web img hover animation
 const downAnimationList = document.querySelectorAll('.down-animation');
 console.log('downAnimationList: ', downAnimationList);
 
@@ -81,79 +147,6 @@ downAnimationList.forEach((downAnimationItem) => {
   });
 });
 
-// navbar toggle button for small screen
-// const navbarToggleBtn = document.querySelector('.navbar_toggle-btn');
-// navbarToggleBtn.addEventListener('click', () => {
-//     navbarMenu.classList.toggle('open');
-// });
-
-//Handle click on "contact me" button on home
-const homeContactBtn = document.querySelector('.home_contact');
-homeContactBtn.addEventListener('click', () => {
-  scrollIntoView('#contact');
-});
-
-//make home slowly fade to transparent as the window scrolls down
-const home = document.querySelector('.home_container');
-const homeHeight = home.getBoundingClientRect().height;
-document.addEventListener('scroll', () => {
-  // console.log(homeHeight)
-  home.style.opacity = 1 - window.scrollY / homeHeight;
-});
-
-//Show "arrow up" button when scrolling down
-const arrowUp = document.querySelector('.arrow-up');
-document.addEventListener('scroll', () => {
-  if (window.scrollY > homeHeight / 2) {
-    arrowUp.classList.add('visible');
-  } else {
-    arrowUp.classList.remove('visible');
-  }
-});
-
-//Handle Click on the "arrow up" button
-arrowUp.addEventListener('click', (event) => {
-  scrollIntoView('#home');
-});
-
-//contact open & close
-const contactOpenBtn = document.querySelector('#contact_open_btn'); //user아이콘
-const contactCloseBtn = document.querySelector('.contact_close'); //열린 user창 X 아이콘
-const contactAction = document.querySelector('.contact_action'); //user 눌렀을 때 정보
-console.log('contactOpenBtn: ', contactOpenBtn);
-contactOpenBtn.addEventListener('click', () => {
-  console.log('ccc');
-  contactAction.classList.remove('contact_action');
-});
-contactCloseBtn.addEventListener('click', () => {
-  contactAction.classList.add('contact_action');
-});
-
-//menu open & close
-const menuOpenBtn = document.querySelector('#menu_open_btn'); //menu아이콘
-// const menuCloseBtn = document.querySelector('#menu_close_btn');
-const menuSideContent = document.querySelector('#menu-side-content'); //menu
-// menuOpenBtn.addEventListener('click', () => {
-//   console.log('vvv');
-//   menuSideContent.style.cssText = "display: block";
-//   // menu 내용 열기
-// });
-// menuCloseBtn.addEventListener('click', () => {
-//   console.log('aaa');
-//   menuSideContent.style.cssText = 'display: none';
-//   // menu 내용 열기
-// });;
-// menu아이콘 눌렀을때 menu들 이 display block
-// menu아이콘 누르면 menu들  display none
-menuOpenBtn.addEventListener('click', () => {
-  // menuSideContent.classList.remove('');
-  if (menuSideContent.style.display === 'none') {
-    menuSideContent.style.display = 'block';
-  } else {
-    menuSideContent.style.display = 'none';
-  }
-});
-
 //About - slick
 $(function () {
   $('#slider-div').slick({
@@ -198,45 +191,46 @@ $(function () {
 });
 
 // Projects
-const workBtnContainer = document.querySelector('.work_categories');
-const projectContainer = document.querySelector('.work_projects');
-const projects = document.querySelectorAll('.project');
+// const workBtnContainer = document.querySelector('.work_categories');
+// const projectContainer = document.querySelector('.work_projects');
+// const projects = document.querySelectorAll('.project');
 
-workBtnContainer.addEventListener('click', (e) => {
-  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-  if (filter == null) {
-    return;
-  }
+// workBtnContainer.addEventListener('click', (e) => {
+//   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+//   if (filter == null) {
+//     return;
+//   }
 
-  //선택된 아이템 select 없애고 새로 클릭된 아이템에 active 붙이기
-  const active = document.querySelector('.category_btn.selected');
-  active.classList.remove('selected');
-  const target =
-    e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
-  target.classList.add('selected');
+//   //선택된 아이템 select 없애고 새로 클릭된 아이템에 active 붙이기
+//   const active = document.querySelector('.category_btn.selected');
+//   active.classList.remove('selected');
+//   const target =
+//     e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+//   target.classList.add('selected');
 
-  // console.log(filter);
-  projectContainer.classList.add('anim-out');
-  setTimeout(() => {
-    projects.forEach((project) => {
-      console.log(project.dataset.type);
-      if (filter === '*' || filter === project.dataset.type) {
-        project.classList.remove('invisible');
-      } else {
-        project.classList.add('invisible');
-      }
-    });
-    projectContainer.classList.remove('anim-out');
-  }, 300);
-});
+//   // console.log(filter);
+//   projectContainer.classList.add('anim-out');
+//   setTimeout(() => {
+//     projects.forEach((project) => {
+//       console.log(project.dataset.type);
+//       if (filter === '*' || filter === project.dataset.type) {
+//         project.classList.remove('invisible');
+//       } else {
+//         project.classList.add('invisible');
+//       }
+//     });
+//     projectContainer.classList.remove('anim-out');
+//   }, 300);
+// });
 
-function scrollIntoView(elementName) {
-  console.log('scrollIntoView: ', elementName);
-  const scrollTo = document.querySelector(elementName);
-  scrollTo.scrollIntoView({ behavior: 'smooth' });
-}
+// function scrollIntoView(elementName) {
+//   console.log('scrollIntoView: ', elementName);
+//   const scrollTo = document.querySelector(elementName);
+//   scrollTo.scrollIntoView({ behavior: 'smooth' });
+// }
 
 //Testimonials - p태그
+
 let billComent = `팀의 일원으로 목표를 이루기 위해 과제를 성실히 수행했습니다.
 배려와 존중을 바탕으로 상호작용하고 팀원들의 생각을 수용하고 통합하여 결과물을 만들어냈습니다.
 주어진 상황에 만족하지 않고 좋은 성과를 창출하려고 노력하는 태도를 보였습니다.
