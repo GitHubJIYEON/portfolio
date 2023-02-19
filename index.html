@@ -44,12 +44,20 @@
   <body>
     <!-- Navbar -->
     <nav id="navbar">
+      <!-- menu toggle button -->
+      <button
+        class="more_open"
+        style="border-right: solid 1px"
+        id="menu_toggle_btn"
+      >
+        <i class="fa-solid fa-bars fa-xl" style="--fa-primary-color: blue"></i>
+      </button>
+
       <div class="navbar_logo">
         <a href="#">
           <span class="logo_name">JIYEON</span>
         </a>
       </div>
-      <!-- <div class="navbar_menu"> -->
       <ul class="navbar_menu navbar_data">
         <li class="navbar_menu_item active" data-target-element="#home">
           Home
@@ -62,14 +70,22 @@
         </li>
         <li class="navbar_menu_item" data-target-element="#contact">Contact</li>
       </ul>
-      <!-- <button class="more_open contact_open"><i class="fa-solid fa-bars"></i></button> -->
-
-      <!-- </div> -->
-      <button class="more_open" id="contact_open_btn">
-        <i class="fa-solid fa-user-plus"></i>
-      </button>
-      <button class="more_open" id="menu_open_btn">
-        <i class="fa-solid fa-bars"></i>
+      <!-- contact toggle button -->
+      <button
+        class="more_open"
+        style="border-left: solid 1px"
+        id="contact_toggle_btn"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="25"
+          viewBox="0 0 512 512"
+        >
+          <path
+            d="M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z"
+          />
+        </svg>
       </button>
 
       <!-- Toggle button -->
@@ -79,10 +95,11 @@
     </nav>
 
     <!-- contact side content -->
-    <div class="contact contact_action">
-      <button class="more_close">
-        <i class="fa-regular fa-x contact_close"></i>
-      </button>
+    <div class="contact">
+      <!-- <div style="width: 100%; text-align: end">
+        <button class="more_close contact_close"></button>
+      </div> -->
+
       <div class="more_lists">
         <img src="./imgs/JIYEONLEE_long.jpg" alt="more_img" class="open_img" />
         <div class="text_div">CONTACT ME</div>
@@ -104,11 +121,7 @@
       </div>
     </div>
     <!-- menu side content -->
-    <div
-      class="contact"
-      id="menu-side-content"
-      style="display: none; height: auto"
-    >
+    <div class="menu-list" id="menu-side-content">
       <!-- <div><div id="menu_close_btn">x button</div></div> -->
       <ul class="navbar_data">
         <li class="navbar_block_list" data-target-element="#home">Home</li>
@@ -141,6 +154,9 @@
           I am
         </h1>
         <h2 class="home_description">Don't be the same. Be better</h2>
+        <p style="color: white">
+          javascript, html, css 만을 사용하여 만든 페이지 입니다.
+        </p>
         <button class="home_contact">Contact Me</button>
       </div>
     </section>
@@ -149,37 +165,82 @@
     <!-- About -->
     <section id="about" class="section">
       <h1>About me</h1>
+      <p>hover me !</p>
 
       <!-- stlye 은 slick 영역 확인용 -->
       <div class="about_container">
         <div class="about_slick" id="slider-div">
+          <!-- slide 1 -->
           <div>
-            <img src="./imgs/about/about_01.png" alt="img" class="about_img" />
+            <div class="slide-box-container">
+              <div class="slide-box">
+                <div class="about-card-container">
+                  <div class="about-card">
+                    <div class="front">
+                      <img src="./imgs/about/about_01.png" alt="img" class="" />
+                    </div>
+                    <div class="back">
+                      <img src="./imgs/about/about_01.png" alt="img" />
+                      <span>쉽게만 살아가면 재미없어 빙고!</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="about_text_container">
-            <h2>Active</h2>
-            <p class="about_text">쉽게만 살아가면 재미없어 빙고!</p>
-          </div>
+          <!-- slide 2 -->
           <div>
-            <img src="./imgs/about/about_07.png" alt="img" class="about_img" />
+            <div class="slide-box-container">
+              <div class="slide-box">
+                <div class="about-card-container">
+                  <div class="about-card">
+                    <div class="front">
+                      <img src="./imgs/about/about_07.png" alt="img" class="" />
+                    </div>
+                    <div class="back">
+                      <img src="./imgs/about/about_07.png" alt="img" />
+                      <span>테스트 성공해라</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="about_text_container">
-            <h2>제목</h2>
-            <p class="about_text">테스트 성공해라</p>
-          </div>
+          <!-- slide 3 -->
           <div>
-            <img src="./imgs/about/about_03.png" alt="img" class="about_img" />
+            <div class="slide-box-container">
+              <div class="slide-box">
+                <div class="about-card-container">
+                  <div class="about-card">
+                    <div class="front">
+                      <img src="./imgs/about/about_03.png" alt="img" class="" />
+                    </div>
+                    <div class="back">
+                      <img src="./imgs/about/about_03.png" alt="img" />
+                      <span>테스트 성공해라</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="about_text_container">
-            <h2>Positive</h2>
-            <p class="about_text">테스트 성공해라</p>
-          </div>
+          <!-- slide 4 -->
           <div>
-            <img src="./imgs/about/about_06.png" alt="img" class="about_img" />
-          </div>
-          <div class="about_text_container">
-            <h2>Responsive</h2>
-            <p class="about_text">테스트 성공해라</p>
+            <div class="slide-box-container">
+              <div class="slide-box">
+                <div class="about-card-container">
+                  <div class="about-card">
+                    <div class="front">
+                      <img src="./imgs/about/about_06.png" alt="img" class="" />
+                    </div>
+                    <div class="back">
+                      <img src="./imgs/about/about_06.png" alt="img" />
+                      <span>테스트 성공해라</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -342,6 +403,7 @@
     <section id="work" class="section">
       <div class="section_container">
         <h1>Work</h1>
+        <p>click me !</p>
         <!-- <div class="work_categories">
           <button class="category_btn selected" data-filter="*">
             All<span class="category_count">8</span>
@@ -386,7 +448,6 @@
             <div class="work_box">
               <a href="https://luxmeal.xyz/" target="_blank">
                 <div class="web_box bg1 down-animation">
-                  <!-- <div class="web_img"><a href="https://luxmeal.xyz/" target="_blank"><img src="./imgs/projects/react_luxmeal.png" alt="project1"></a></div> -->
                   <div
                     class="web_img"
                     style="
@@ -407,36 +468,83 @@
 
             <div class="work_box">
               <div class="web_text">
-                <h3>React (Team Project)</h3>
+                <h3>React site (Team Project)</h3>
                 <p>
                   Stack Overflow 사이트를 참고하여 백엔드와의 협업 과정을 익힌
                   프로젝트입니다.
                 </p>
               </div>
-              <a href="https://luxmeal.xyz/" target="_blank">
+              <a
+                href="https://github.com/codestates-seb/seb40_pre_031/wiki/%EC%8B%9C%EC%97%B0"
+                target="_blank"
+              >
                 <div class="web_box bg2">
-                  <div class="web_img"></div>
+                  <div
+                    class="web_img"
+                    style="
+                      background-image: url(./imgs/projects/stackoverflow_react.png);
+                      bottom: 10px;
+                    "
+                  ></div>
                 </div>
               </a>
             </div>
 
             <div class="work_box">
-              <a href="https://luxmeal.xyz/" target="_blank">
+              <a
+                href="https://webstandard001.netlify.app/
+              https://todolist002.netlify.app"
+                target="_blank"
+              >
                 <div class="web_box bg3">
-                  <div class="web_img"></div>
+                  <div
+                    class="web_img"
+                    style="
+                      background-image: url(./imgs/projects/react_todolist.png);
+                      background-size: contain;
+                      height: 400px;
+                    "
+                  ></div>
                 </div>
               </a>
               <div class="web_text">
-                <h3>Webstandard site</h3>
+                <h3>React site (Side Project)</h3>
+                <p>
+                  기본적인 추가, 삭제, 필터링 기능의 To do list 사이트입니다.
+                  Post css 와 context를 활용하여 다크/라이트 모드를 추가하고
+                  브라이저 로컬스토리지에 데이터를 저장하여 동일한 데이터가
+                  출력되도록 구현했습니다.
+                </p>
+              </div>
+            </div>
+
+            <div class="work_box">
+              <div class="web_text">
+                <h3>React site (Side Project) Webstandard site</h3>
                 <p>
                   웹표준을 준수하여 만든 사이트입니다. 웹사이트에서 가장 많이
                   사용되는 팝업, 탭메뉴, 게시판, 슬라이더 등의 다양한 기능을
                   웹표준에 맞게 제작한 사이트입니다.
                 </p>
               </div>
+              <a href="https://webstandard001.netlify.app/" target="_blank">
+                <div class="web_box bg4">
+                  <div
+                    class="web_img"
+                    style="
+                      background-image: url(./imgs/projects/webstandard_JS.png);
+
+                      bottom: 30px;
+                    "
+                  ></div>
+                </div>
+              </a>
             </div>
 
             <div class="work_box">
+              <div class="web_box bg5">
+                <div class="web_img"></div>
+              </div>
               <div class="web_text">
                 <h3>React site (in progress)</h3>
                 <p>
@@ -447,22 +555,23 @@
                   관련 영상 목록 등을 구현하였습니다.
                 </p>
               </div>
-              <a href="https://luxmeal.xyz/" target="_blank">
-                <div class="web_box bg4">
-                  <div class="web_img"></div>
-                </div>
-              </a>
             </div>
 
             <!-- <div class="work_box">
-          <div class="web_box bg5">
-            <div class="web_img"></div>
-          </div>
-          <div class="web_text">
-            <h3>Team Project</h3>
-            <p>this is with JavaScript this is with JavaScriptthis is with JavaScript</p>
-          </div>
-        </div>       -->
+              <div class="web_box bg5">
+                <div class="web_img"></div>
+              </div>
+              <div class="web_text">
+                <h3>React site (in progress)</h3>
+                <p>
+                  Rapid API 를 활용한 유튜브 리액트 사이트입니다. npm 라이브러리
+                  중에서 react-router-dom, react-player 를 활용하였고, useEffect
+                  훅으로 출력하였습니다. useParams 에 정보를 저장하여 출력하는
+                  채널 컨텐츠를 구성하였으며 카테고리 목록, 검색창, 영상 플레이,
+                  관련 영상 목록 등을 구현하였습니다.
+                </p>
+              </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -473,6 +582,7 @@
     <section id="testimonial" class="section">
       <div class="section_container">
         <h1>Testimonials</h1>
+        <p>부트캠프 과정에서 받았던 피드백 입니다.</p>
         <!-- <h3>See what they say about me</h3> -->
         <div class="testimonials">
           <div class="testimonial">
@@ -527,6 +637,7 @@
     <!-- contact -->
     <section id="contact" class="section">
       <h1 class="contact_title">CONTACT</h1>
+      <p>send me !</p>
       <div class="contact_container">
         <div class="contact_imgbox">
           <img
@@ -534,48 +645,52 @@
             alt="contact_img"
             class="contact_img"
           />
-          <div>
-            <a href="https://github.com/GitHubJIYEON" target="_blank"
-              >#github</a
-            >
-            <a
-              href="https://www.notion.so/publicforu/Rachel-Nociton-660a4e8f5c7e4b799f8f6a0ccee04807"
-              target="_blank"
-              >#notion</a
-            >
-            <a href="https://tistory-justgoforit.tistory.com/" target="_blank"
-              >#blog</a
-            >
-          </div>
+          <p>
+            <span class="comment_span">
+              #에너지넘침 #행동력갑 #프로오지랖퍼 #리액션부자 #적응력갑
+              #인내심레전드
+            </span>
+          </p>
         </div>
         <div class="contact_formbox">
           <form action="#" method="post">
-            <fieldset class="info">
+            <!-- <fieldset class="info">
               <input
                 type="text"
-                id="name"
+                id="email_name"
                 name="name"
                 placeholder="Your name"
               />
               <input
                 type="text"
-                id="email"
+                id="email_address"
                 name="email"
                 placeholder="Your Email"
+              />
+            </fieldset> -->
+            <fieldset class="info">
+              <input
+                type="text"
+                id="email_subject"
+                name="subject"
+                placeholder="Title"
               />
             </fieldset>
             <fieldset class="info">
               <textarea
                 name="message"
-                id="message"
+                id="email_body"
                 cols="50"
                 rows="5"
-                placeholder="Type message"
+                placeholder="Message"
               ></textarea>
             </fieldset>
-            <a href="mailto:jiyeon2954@gmail.com">
-              <button type="submit" id="send_btn">SEND</button></a
-            >
+            <!-- <a href="mailto:jiyeon2954@gmail.com?subject=제목123&body=내용123"> -->
+            <button type="button" id="send_btn">SEND</button>
+            <!-- <button type="submit" id="send_btn">SEND</button> -->
+            <!-- <div id="send_btn">SEND</div> -->
+            <!-- </a> -->
+            <a style="display: none" href="" id="send_anchor"></a>
           </form>
 
           <!-- <h1 class="contact_title">CONTACT</h1>
@@ -599,6 +714,7 @@
         <p>
           Thanks for visiting my Website.<br />Copyright ⓒ 2023. Jiyeon Lee All
           rights reserved.
+          <!-- Thank you for taking your time -->
         </p>
       </div>
     </footer>
@@ -606,7 +722,7 @@
 
     <!-- Arrow up -->
     <button class="arrow-up">
-      <i class="fas fa-arrow-up"></i>
+      <i class="fas fa-arrow-up fa-xl"></i>
     </button>
   </body>
 </html>
