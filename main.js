@@ -1,19 +1,5 @@
 'use strict';
 
-// //navbar 를 투명 & 엘로우
-// const navbar = document.querySelector('#navbar');
-// const navbarHeight = navbar.getBoundingClientRect().height;
-// document.addEventListener('scroll', () => {
-//   // console.log(`window.scrollY: ${window.scrollY}`);
-//   // console.log(`navbarHeight: ${navbarHeight}`);
-
-//   if (window.scrollY > navbarHeight) {
-//     navbar.classList.add('navbar-dark');
-//   } else {
-//     navbar.classList.remove('navbar-dark');
-//   }
-// });
-
 // mail send btn
 
 let emailSubject = document.getElementById('email_subject');
@@ -112,12 +98,6 @@ navbarMenuList.forEach((navbarMenu) => {
     scrollIntoView(targetElement);
   });
 });
-
-// navbar toggle button for small screen
-// const navbarToggleBtn = document.querySelector('.navbar_toggle-btn');
-// navbarToggleBtn.addEventListener('click', () => {
-//     navbarMenu.classList.toggle('open');
-// });
 
 // "contact me" button on home  contact 으로 이동
 const homeContactBtn = document.querySelector('.home_contact');
@@ -243,43 +223,6 @@ downAnimationList.forEach((downAnimationItem) => {
   });
 });
 
-// about-img hover 할 때 글씨 보여주기
-// let slideboxList = document.querySelectorAll('.slide-box');
-// slideboxList.forEach((slidebox) => {
-//   console.log(slidebox);
-
-//   slidebox.addEventListener('mouseover', (ev) => {
-//     console.log('mouseover');
-//     let textbox = ev.target.parentElement.querySelector(
-//       '.about_text_container'
-//     );
-//     let image = ev.target.parentElement.querySelector('.about_img');
-//     image.style.transition = 'all ease 2s';
-//     image.style.filter = 'brightness(50%)';
-//     image.style.transform = 'rotateY(180deg)';
-//     setTimeout(() => {
-//       textbox.style.display = 'block';
-//     }, 2000);
-//   });
-
-//   slidebox.addEventListener('mouseleave', (ev) => {
-//     console.log('mouseleave');
-//     let textbox = ev.target.parentElement.querySelector(
-//       '.about_text_container'
-//     );
-//     let image = ev.target.parentElement.querySelector('.about_img');
-//     // textbox.style.display = 'none';
-//     image.style.filter = 'brightness(100%)';
-
-//     // image.style.transition = 'all ease 2s';/
-//     // image.style.filter = 'brightness(50%)';
-//     image.style.transform = 'rotateY(0deg)';
-//     setTimeout(() => {
-//       textbox.style.display = 'none';
-//     }, 2000);
-//   });
-// });
-
 //About - slick
 $(function () {
   $('#slider-div').slick({
@@ -322,45 +265,6 @@ $(function () {
     ],
   });
 });
-
-// Projects
-// const workBtnContainer = document.querySelector('.work_categories');
-// const projectContainer = document.querySelector('.work_projects');
-// const projects = document.querySelectorAll('.project');
-
-// workBtnContainer.addEventListener('click', (e) => {
-//   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-//   if (filter == null) {
-//     return;
-//   }
-
-//   //선택된 아이템 select 없애고 새로 클릭된 아이템에 active 붙이기
-//   const active = document.querySelector('.category_btn.selected');
-//   active.classList.remove('selected');
-//   const target =
-//     e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
-//   target.classList.add('selected');
-
-//   // console.log(filter);
-//   projectContainer.classList.add('anim-out');
-//   setTimeout(() => {
-//     projects.forEach((project) => {
-//       console.log(project.dataset.type);
-//       if (filter === '*' || filter === project.dataset.type) {
-//         project.classList.remove('invisible');
-//       } else {
-//         project.classList.add('invisible');
-//       }
-//     });
-//     projectContainer.classList.remove('anim-out');
-//   }, 300);
-// });
-
-// function scrollIntoView(elementName) {
-//   console.log('scrollIntoView: ', elementName);
-//   const scrollTo = document.querySelector(elementName);
-//   scrollTo.scrollIntoView({ behavior: 'smooth' });
-// }
 
 //Testimonials - p태그
 
