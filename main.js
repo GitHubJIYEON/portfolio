@@ -38,7 +38,7 @@ function aboutCardMouseOverHandler(event) {
 
       let currentTarget = event.target.parentElement;
 
-      console.log(currentTarget);
+      //console.log(currentTarget);
 
       if (currentTarget.className === 'back') {
         if (currentTarget.style.transform === 'rotateY(180deg)') {
@@ -68,8 +68,8 @@ function aboutCardMouseLeaveHandler(event) {
     mouseStatus = event.type;
 
     if (event.type === 'mouseleave') {
-      console.log(frontDiv);
-      console.log(backDiv);
+      // console.log(frontDiv);
+      // console.log(backDiv);
       if (frontDiv && backDiv) {
         if (frontDiv.style.transform === 'rotateY(0deg)') {
           frontDiv.style.transform = 'rotateY(180deg)';
@@ -129,7 +129,7 @@ arrowUp.addEventListener('click', (event) => {
 });
 
 function scrollIntoView(elementName) {
-  console.log('scrollIntoView: ', elementName);
+  //console.log('scrollIntoView: ', elementName);
   const scrollTo = document.querySelector(elementName);
   scrollTo.scrollIntoView({ behavior: 'smooth' });
 }
@@ -139,8 +139,8 @@ const menuToggleBtn = document.querySelector('#menu_toggle_btn'); //menu아이�
 const menuSideContent = document.querySelector('#menu-side-content'); //menu
 
 menuToggleBtn.addEventListener('click', () => {
-  console.log(getComputedStyle(menuSideContent).left);
-  console.log(menuSideContent.style.left);
+  // console.log(getComputedStyle(menuSideContent).left);
+  // console.log(menuSideContent.style.left);
   if (
     getComputedStyle(menuSideContent).left === '0px' ||
     menuSideContent.style.left === '0px'
@@ -174,7 +174,7 @@ contactToggleBtn.addEventListener('click', () => {
 
 //work web img hover animation
 const downAnimationList = document.querySelectorAll('.down-animation');
-console.log('downAnimationList: ', downAnimationList);
+//console.log('downAnimationList: ', downAnimationList);
 
 let isMouseOverEvent = false;
 let backgroundPositionY = 0;
@@ -182,7 +182,7 @@ let mouseLeaveTimer = '';
 let mouseOverTimer = '';
 
 downAnimationList.forEach((downAnimationItem) => {
-  console.log('downAnimationItem: ', downAnimationItem);
+  //console.log('downAnimationItem: ', downAnimationItem);
 
   downAnimationItem.addEventListener('mouseover', () => {
     if (mouseLeaveTimer) {
@@ -190,7 +190,7 @@ downAnimationList.forEach((downAnimationItem) => {
     }
     if (!isMouseOverEvent) {
       isMouseOverEvent = true;
-      console.log('downAnimationItem mouseover');
+      //console.log('downAnimationItem mouseover');
       mouseOverTimer = setInterval(() => {
         if (backgroundPositionY < 100) {
           backgroundPositionY += 0.1;
@@ -209,7 +209,7 @@ downAnimationList.forEach((downAnimationItem) => {
     }
     if (isMouseOverEvent) {
       isMouseOverEvent = false;
-      console.log('downAnimationItem mouseleave');
+      //console.log('downAnimationItem mouseleave');
       mouseLeaveTimer = setInterval(() => {
         if (backgroundPositionY > 0) {
           backgroundPositionY -= 0.2;
@@ -301,7 +301,7 @@ document.getElementById('choiComent').innerHTML = choiComent;
 //Testimonials - View more btn
 const viewMorebtn = document.querySelectorAll('.testimonial_display_btn');
 
-console.log('viewMorebtn: ', viewMorebtn);
+//console.log('viewMorebtn: ', viewMorebtn);
 
 const testimonialCommentBox = document.querySelectorAll(
   '.testimonial-comment-box'
@@ -309,16 +309,16 @@ const testimonialCommentBox = document.querySelectorAll(
 
 viewMorebtn.forEach((button) => {
   button.addEventListener('click', (event) => {
-    console.log('view more button click !!!');
+    // console.log('view more button click !!!');
 
-    console.log(event.target);
-    console.log(event.target.children);
-    console.log(event.target.children[0].classList);
-    console.log(event.target.children[0].classList.contains('fa-arrow-down'));
+    // console.log(event.target);
+    // console.log(event.target.children);
+    // console.log(event.target.children[0].classList);
+    // console.log(event.target.children[0].classList.contains('fa-arrow-down'));
 
-    console.log(event.target);
-    console.log(event.target.parentElement);
-    console.log(event.target.parentElement.classList);
+    // console.log(event.target);
+    // console.log(event.target.parentElement);
+    // console.log(event.target.parentElement.classList);
 
     if (event.target.children[0].classList.contains('fa-arrow-down')) {
       // 더보기 닫혔을 때 열기
