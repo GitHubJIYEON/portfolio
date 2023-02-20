@@ -342,7 +342,11 @@ p {
 }
 .icon_lists {
   display: inline-flex;
-  /* margin-top: 40px; */
+  margin-top: 20px;
+}
+.fa-brands,
+.fab {
+  font-size: x-large;
 }
 
 /* Home */
@@ -1051,6 +1055,7 @@ p {
     border-bottom: 1px solid var(--color-black);
     padding: 24px;
     text-align: center;
+    cursor: pointer;
   }
   .navbar_block_list:hover {
     background-color: var(--color-light-white);
