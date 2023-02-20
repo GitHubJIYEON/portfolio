@@ -715,8 +715,9 @@ p {
   margin: auto;
 }
 .web_box {
-  width: 500px;
-  height: 460px;
+  overflow-y: hidden;
+  width: 32rem;
+  height: 34em;
   /* background-color: #E5D7C7; */
   position: relative;
   text-align: center;
@@ -739,13 +740,15 @@ p {
 }
 
 .web_img {
-  width: 360px;
-  height: 380px;
+  width: 24rem;
+  height: 30rem;
   /* background-color: var(--color-light-white); */
   position: absolute;
   bottom: 0;
-  left: 70px;
+  left: 4rem;
+  /* bottom: 2rem; */
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 .web_text h3 {
   font-weight: var(--weight-semi-bold);
@@ -1005,10 +1008,11 @@ p {
   }
   .web_text {
     order: 1;
+    min-inline-size: fit-content;
   }
 
   .web_text {
-    width: 500px;
+    /* width: 500px; */
     margin: 40px auto;
   }
 
@@ -1018,6 +1022,7 @@ p {
 }
 
 /* For below 768px screen width */
+
 @media screen and (max-width: 768px) {
   #menu_toggle_btn {
     display: block;
@@ -1064,7 +1069,6 @@ p {
     padding: 16px;
     padding-top: 40px;
   }
-
   .about-card-container {
     width: 280px;
     height: 380px;
@@ -1076,6 +1080,10 @@ p {
   .major {
     margin-bottom: 30px;
     margin-bottom: 0px;
+  }
+  .slick-arrow {
+    width: 40px;
+    height: 40px;
   }
   .skillset {
     flex-direction: column;
@@ -1114,5 +1122,34 @@ p {
   }
   .contact_img {
     width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .about_container {
+    padding: 20px 90px 0 90px;
+  }
+  .web_box {
+    width: 20rem;
+    height: 24em;
+  }
+  .web_img {
+    /* width: 100%; */
+    width: 70%;
+    top: 3rem;
+    left: 3rem;
+  }
+  .home_description {
+    font-size: 12px;
+  }
+  .home_container p {
+    font-size: 10px;
+  }
+  .about-card-container {
+    width: 145px;
+    height: 180px;
+  }
+  .slick-arrow {
+    width: 30px;
+    height: 30px;
   }
 }

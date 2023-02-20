@@ -1,11 +1,57 @@
 'use strict';
 
-// mail send btn
+//Navbar section 선택하면 그 선택 위치로 이동
+const navbarMenuList = document.querySelectorAll('.navbar_data');
 
+navbarMenuList.forEach((navbarMenu) => {
+  navbarMenu.addEventListener('click', (event) => {
+    const target = event.target;
+    const targetElement = target.dataset.targetElement;
+    if (targetElement == null) {
+      return;
+    }
+    scrollIntoView(targetElement);
+  });
+});
+
+// "contact me" button on home  contact 으로 이동
+const homeContactBtn = document.querySelector('.home_contact');
+homeContactBtn.addEventListener('click', () => {
+  scrollIntoView('#contact');
+});
+
+//make home slowly fade to transparent as the window scrolls down
+const home = document.querySelector('.home_container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+  // console.log(homeHeight)
+  home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+//Show "arrow up" button when scrolling down
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll', () => {
+  if (window.scrollY > homeHeight / 2) {
+    arrowUp.classList.add('visible');
+  } else {
+    arrowUp.classList.remove('visible');
+  }
+});
+
+// "arrow up" button 누르면 Home으로 이동
+arrowUp.addEventListener('click', (event) => {
+  scrollIntoView('#home');
+});
+
+function scrollIntoView(elementName) {
+  //console.log('scrollIntoView: ', elementName);
+  const scrollTo = document.querySelector(elementName);
+  scrollTo.scrollIntoView({ behavior: 'smooth' });
+}
+
+// mail send btn
 let emailSubject = document.getElementById('email_subject');
 let emailBody = document.getElementById('email_body');
-// let emailAddress = document.getElementById('email_address');
-
 let sendAnchor = document.getElementById('send_anchor');
 
 let sendBtn = document.getElementById('send_btn');
@@ -13,7 +59,7 @@ sendBtn.addEventListener('click', () => {
   sendAnchor.href = `mailto:jiyeon2954@gmail.com?subject=${emailSubject.value}&body=${emailBody.value}`;
   sendAnchor.click();
 });
-// main send btn end
+// mail send btn end
 
 // about card flip
 let aboutCardList = document.querySelectorAll('.about-card');
@@ -84,55 +130,6 @@ function aboutCardMouseLeaveHandler(event) {
 }
 
 // about card flip end
-
-//Navbar section 선택하면 그 선택 위치로 이동
-const navbarMenuList = document.querySelectorAll('.navbar_data');
-
-navbarMenuList.forEach((navbarMenu) => {
-  navbarMenu.addEventListener('click', (event) => {
-    const target = event.target;
-    const targetElement = target.dataset.targetElement;
-    if (targetElement == null) {
-      return;
-    }
-    scrollIntoView(targetElement);
-  });
-});
-
-// "contact me" button on home  contact 으로 이동
-const homeContactBtn = document.querySelector('.home_contact');
-homeContactBtn.addEventListener('click', () => {
-  scrollIntoView('#contact');
-});
-
-//make home slowly fade to transparent as the window scrolls down
-const home = document.querySelector('.home_container');
-const homeHeight = home.getBoundingClientRect().height;
-document.addEventListener('scroll', () => {
-  // console.log(homeHeight)
-  home.style.opacity = 1 - window.scrollY / homeHeight;
-});
-
-//Show "arrow up" button when scrolling down
-const arrowUp = document.querySelector('.arrow-up');
-document.addEventListener('scroll', () => {
-  if (window.scrollY > homeHeight / 2) {
-    arrowUp.classList.add('visible');
-  } else {
-    arrowUp.classList.remove('visible');
-  }
-});
-
-// "arrow up" button 누르면 Home으로 이동
-arrowUp.addEventListener('click', (event) => {
-  scrollIntoView('#home');
-});
-
-function scrollIntoView(elementName) {
-  //console.log('scrollIntoView: ', elementName);
-  const scrollTo = document.querySelector(elementName);
-  scrollTo.scrollIntoView({ behavior: 'smooth' });
-}
 
 //menu open & close
 const menuToggleBtn = document.querySelector('#menu_toggle_btn'); //menu아이콘
