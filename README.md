@@ -1,7 +1,6 @@
 # 💫Portfolio
 
 Javascript, Html, Css 만으로 제작된 포트폴리오입니다.
-"update" 중 입니다.
 
 # 🔗Link
 
