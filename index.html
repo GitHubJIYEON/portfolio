@@ -16,11 +16,6 @@
       href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&family=Josefin+Sans:wght@400;600;700&family=Montserrat:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
-    <!-- 폰트어썸 -->
-    <script
-      src="https://kit.fontawesome.com/39f0d4ac98.js"
-      crossorigin="anonymous"
-    ></script>
     <!-- <link
       href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&family=Josefin+Sans:wght@400;600;700&family=Montserrat:wght@400;600;700&family=Pinyon+Script&display=swap"
       rel="stylesheet"
@@ -48,7 +43,16 @@
         style="border-right: solid 1px"
         id="menu_toggle_btn"
       >
-        <i class="fa-solid fa-bars fa-xl" style="--fa-primary-color: blue"></i>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="25"
+          viewBox="0 0 448 512"
+        >
+          <path
+            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+          />
+        </svg>
       </button>
 
       <div class="navbar_logo">
@@ -97,16 +101,21 @@
         <div class="text_info">010 - 8582 - 2954</div>
         <div class="icon_lists">
           <a href="https://github.com/GitHubJIYEON" target="_blank">
-            <i class="fa-brands fa-github"></i>
+            <img src="./svg/github.svg" alt="github_icon" />
           </a>
           <a
             href="https://www.notion.so/publicforu/Rachel-Nociton-660a4e8f5c7e4b799f8f6a0ccee04807"
             target="_blank"
-            ><img src="./svg/icons8-notion.svg" alt="notion_icon"
-          /></a>
-          <a href="https://tistory-justgoforit.tistory.com/" target="_blank"
-            ><i class="fa-brands fa-blogger"></i
-          ></a>
+          >
+            <img src="./svg/icons8-notion.svg" alt="notion_icon" />
+          </a>
+          <a href="https://tistory-justgoforit.tistory.com/" target="_blank">
+            <img
+              src="./svg/blogger-b.svg"
+              alt="blogger_icon"
+              style="width: 22px"
+            />
+          </a>
         </div>
       </div>
     </div>
@@ -517,9 +526,8 @@
     <footer id="footer">
       <div class="footer_container">
         <p>
-          Thanks for visiting my Website.<br />Copyright ⓒ 2023. Jiyeon Lee All
+          Thank you for taking your time<br />Copyright ⓒ 2023. Jiyeon Lee All
           rights reserved.
-          <!-- Thank you for taking your time -->
         </p>
       </div>
     </footer>
@@ -527,7 +535,17 @@
 
     <!-- Arrow up -->
     <button class="arrow-up">
-      <i class="fas fa-arrow-up fa-xl"></i>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="26"
+        height="28"
+        fill="white"
+        viewBox="0 0 384 512"
+      >
+        <path
+          d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+        />
+      </svg>
     </button>
 
     <script src="main.js" defer></script>
