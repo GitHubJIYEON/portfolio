@@ -1118,6 +1118,7 @@ p {
   }
   .testimonial-comment-box {
     order: 1;
+    width: 24rem;
   }
   .contact_img {
     width: 100%;
