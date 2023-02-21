@@ -1033,10 +1033,6 @@ p {
     font-style: var(--font-medium);
   }
 
-  .logo_name {
-    display: none;
-  }
-
   .navbar_menu {
     flex-direction: center;
     text-align: center;
